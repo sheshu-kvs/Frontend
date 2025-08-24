@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* I want to select the first ul in every div(So we are using the div direct child to be the ul
+         i am giving the Pseudo first-of-type ) */
+         /* div>ul:first-of-type{
+            background-color: green;
+        } */
+         /* div>ul:last-of-type{
+            background-color: green;
+        } */
+
+  
+
+/* 
+       /* it is used to select the first child ,for grouping we need to combine both using the(,) */
+       /* li:first-child{
+        background-color: red;
+       }
+       /* it is used to select the first child */
+       /* li:last-child{
+        background-color: greenyellow;
+       /* }  
+     /* for the specific item i want to select the so we can nth child */
+
+
+
+
+     /* i want to select the first list every div */
+     /* div>ul:first-of-type{
+        background-color: red;
+     } */
+      
+     /* i want to select the last list every div */
+     /* div>ul:last-of-type{
+        background-color: red;
+     } */
+
+     /* i want to select the particular list using the nth of type with the in the ul second values list */
+
+     /* div>ul:nth-of-type(2){
+        background-color: red;
+     } */
+
+      /* li:nth-of-type(3){
+        background-color: red;
+     } */
+
+
+     /* it will select first child of the list in siblings of the div
+     div li:first-child{
+    background-color: green;
+     } */
+
+     /* incase we we can add the new tag that on that time it will not work so we use the first-of-type */
+
+    ul 
+    :first-of-type{
+        background-color: blue;
+     }
+
+
+
+
+
+
+
+    
+
+       
+    </style>
+</head>
+<body>
+  
+        <div>
+        <ul>
+            <h2>Hello World</h2>
+            <li>A1</li>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+        </ul>
+        <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+        </ul>
+         <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+        </ul>
+    </div>
+     <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <ul>
+             <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+         <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+
+    
+</body>
+</html>

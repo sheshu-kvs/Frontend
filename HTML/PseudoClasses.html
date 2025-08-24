@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:only-child{
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>One Child</p>
+    </div>
+    <div>
+        <p>First Child</p>
+        <p>Second Child</p>
+    </div>
+
+    <div>
+        <p>First Child P</p>
+        <div>
+            <p>one child</p>
+            <p>Second child with the childOnly one</p>
+        </div>
+        <p>second child</p>
+    </div>
+    
+</body>
+</html>

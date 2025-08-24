@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        [placeholder="Name"],[placeholder="address"]{
+            border: 2px,solid,red;
+            align-items: center;
+            justify-items: auto;
+        }
+        [type="submit"]{
+            background-color: aqua;
+            color:red;
+        }
+        [title~="Ph"]{
+            background-color: firebrick;
+            color: white;
+        }
+        [alt="Img Not Found"]{
+            border: 2px,solid,black;
+        }
+        [title~="A"]{
+            border-radius: 10px;
+        }
+        [class^="top"]{
+            color: blue;
+            background-color: aquamarine;
+        }
+        span{
+            color: red;
+            background-color: aqua;
+        }
+        div,p{
+            color: red;
+            background-color: aqua;
+        }
+        [label*="N"]{
+            color: cyan;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <h2 class="top_flor">Val</h2>
+        <h2 class="top123">ha</h2>
+        <span>A span is the inline element </span>
+        <p>A paragraph is the block element</p>
+        <div>A div is the block eleemnt</div>
+        <h2 class="top218">ads</h2>
+        
+           <label for="">Name:<input type="text" title="A" placeholder="Name">
+           </label><br>
+
+            <label for="">Addres:<input type="text" title="A" placeholder="Address">
+            </label><br>
+
+            <label title="N">Phone:<input type="text" title="Ph" value="8978211926" readonly>
+            </label><br>
+            <label title="N">email:<input type="text" placeholder="Address">
+            </label><br>
+            <label title="aav">Image of the Mac Book</label><img src="m1.jpg" alt="Img Not Found"><br>
+            <input type="submit">
+        
+    </form>
+    
+</body>
+</html>

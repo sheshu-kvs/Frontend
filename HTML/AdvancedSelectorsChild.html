@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdvancedSelectors</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+        h1{
+            background-color: yellow;
+            color: red;
+        }
+        body > p{
+            background-color: powderblue;
+            color: black;
+        }
+       
+        div p{
+            background-color: orange;
+            color: blue;
+
+        }
+         div>p{
+            background-color: cyan;
+            color: brown;
+
+        }
+       .nesteddiv p{
+            background-color: navy;
+            color: pink;
+        }
+        div>p{
+            background-color: teal;
+            color: maroon;
+        }
+    </style>
+</head>
+<body>
+    <h1>h1 Header</h1>
+    <p> outside Div</p>
+   <div>
+    <p>p directly inside div</p>
+     <span><p>p inside span inside div</p></span>
+    <span><p>p inside span inside div</p></span>
+     <p>p inside directly div</p>
+     <div class="nesteddiv">
+     <p>p inside nested div</p>
+     <span><p>p inside span inside nested div</p></span>
+     <span><p>p inside span inside nested div</p></span>
+     <p>p inside nested div</p>
+</div>
+<p>p directly inside div</p>
+</div>
+<p>p outside div</p>    
+</body>
+</html>

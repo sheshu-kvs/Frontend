@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Genral siblig same parent with the first tag and below 
+     that tags are called as the General Sibling(~)
+     
+     adjent sibling are also called as the immediate sibling consider an example
+     like the  child h1 tag below there is the p tag it is the immediate child tag
+     and also the h2 tag adjacent sibling is the p tag
+     -->
+
+     <style>
+        h2~p{
+            background-color: orange;
+            color: black;
+        }
+        h1+p{
+            background-color: green;
+            color: white;
+        }
+     </style>
+</head>
+<body>
+    <h1>H1 outside div</h1>
+    <p>p1 ouside div</p>
+    <div>
+        <h2>inside the div</h2>
+        <p>p1 inside the div</p>
+        <p>p2 inside the div</p>
+        <h3>h3 inside the div</h3>
+    </div>
+    <p>p2 outside the div</p>
+    
+</body>
+</html>

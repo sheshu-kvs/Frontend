@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style>
+        /* ol{
+            background-color: orange;
+        } */
+        /* ul{
+            background-color: tomato;
+        } */
+        /* .first~li{           
+            background-color: aqua;  General Sibling expect the first list 
+        } */
+         .first+li{
+            /* background-color: aqua;    immediate child of the nxt list  */
+         }
+         /* color all the after second li in the ul */
+
+         /* .first~li+li{
+            background-color: blueviolet;
+         } */
+           /* color only the first ul list */
+           /* here first we reaching the ol then immdiate h3(we are using the adjacent sibling(+) then immediate sibling(+(ul)) ) */
+        /* ol+h3+ul{
+            background-color: green;
+
+         } */
+
+         /* color only the first two lists in the every unorder list */
+         .first, .first+li{
+            background-color:greenyellow ;
+         }
+     
+
+        
+
+    </style>
+</head>
+<body>
+    <h2>Lists Available on the WebPage</h2>
+    <ol>
+        <li>Popular Languags</li>
+        <li>Popular Frameworks</li>
+        <li>Highest Paying Jobs</li>
+    </ol>
+    <h3>Popular Languages</h3>
+    <ul>
+        <li class="first">C</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>C#</li>
+        <li>JavaScript</li>
+    </ul>
+    <h4 >Popular Frameworks</h4>
+    <ul>
+        <li class="first">Spring</li>
+        <li>Django</li>
+        <li>Node JS</li>
+        <li>.NET Core</li>
+        <li>Flask</li>
+        <li>ReactJs</li>
+    </ul>
+    <h3 >Highest Paying Jobs</h3>
+    <ul>
+        <li class="first">Devops Engineer</li>
+        <li>Full Stack Developer</li>
+        <li>Data Scientist</li>
+        <li>AI-ML Engineer</li>
+        <li>Cloud Engineer</li>
+        <li>Cyber Security Expert</li>
+    </ul>
+    
+</body>
+</html>

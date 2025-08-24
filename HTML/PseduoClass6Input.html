@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: yellow;
+            font-family: cursive;
+        }
+        form{
+            border: 2px ,solid,black;
+        }
+        p{
+            display: none;
+        }
+    
+        input:hover+p{
+            display: inline;
+            background-color: red;
+        }
+        /* .mode1{
+            display: none;
+        }
+        .mode1:hover{
+            display: inline;
+            background-color: red;
+
+        } */
+         .mode1{
+            display: none;
+         }
+         tr:hover .mode1{
+            display: inline;
+            background-color: red;
+         }
+        img{
+            display: none;
+        }
+        input[type="email"]:focus:valid~img.valid{
+            display: inline;
+            height: 30px;
+            width: 30px;
+        }
+       input[type="email"]:focus:invalid~img.notvalid{
+        display: inline;
+        height: 30px;
+        width: 30px;
+       }
+       input[type="radio"]:checked{
+        height: 15px;
+        width: 15px;
+        /* color: teal; */
+       }
+       input[type="radio"]:checked+label{
+        background-color: red;
+        color: teal;
+       }
+       /* input[type="radio"]: */
+      
+       
+    </style>
+</head>
+<body>
+    <legend name="Value12">
+    <form action="">
+       <table>
+        <tr>
+            <td><label>Name</label></td>
+            <td><input type="text" name="name" size="15" required>
+            <p>Enter the Name:</p></td>
+        
+        </tr>
+        <tr>
+            <td><label for="">College</label></td>
+            <td><input type="text" name="college" size="15" value="UBDT College" readonly></td>
+        </tr>
+        <tr>
+            <td><label >Primary-Email</label></td>
+                <td><input type="email" name="email" size="15">
+                <p>Enter the Email:</p>
+                <img class="valid" src="check.png" >
+                <img class="notvalid"  src="wrong.png">
+                <p class="e123">Enter the Name:</p>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="">Secondary-Email</label></td>
+            <td><input type="email" name="email" size="15"></td>
+        </tr>
+        <tr>
+               <td><label for="">Password</label></td>
+                <td><input type="Password" name="password" size="15"></td>
+        </tr>
+        <tr>
+            <td><label for="">Gender</label></td>
+                <td><input type="radio" name="gender" value="male">
+                <label for="">Male</label>
+                  <input type="radio" name="gender" value="female">
+                <label for="">Female</label>
+                <input type="radio" name="gender" value="others">
+                <label for="">Others</label>
+                </td>
+        </tr>
+        <tr>
+            <td><label for="">Age</label></td>
+            <td><input type="number" min="18" max="100"></td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Mode" >Mode</label></td>
+                <td><select  id="Mode">
+                    <option value="Offline">Offline</option>
+                    <option value="Online">Online</option>
+                </select>
+                <p class="mode1">Enter the Mode:</p>
+           </td>
+        </tr>
+        <td><input type="Submit"></td>
+       </table>
+    </form>
+    </legend>
+</body>
+</html>
