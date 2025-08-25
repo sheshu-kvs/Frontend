@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .parent{
+            border: 5px dotted black;
+            display: flex;
+            margin-top: 200px;
+            margin-bottom: 10px;
+            width: auto;
+            gap:10px;
+        }
+        .first,.second,.third,.fourth{
+            background-color: red;
+            font-family: cursive;
+            border: 5px solid black;
+            
+        }
+
+        /* ==positionfixed== */
+        /* .first{
+            position: fixed;
+             background-color:
+              green;
+        }
+        .fourth{
+            overflow-y: scroll;
+        } */
+        
+        .second{
+            /* position: static;  //there will be the no changes */
+            top:10px;
+            left:20px
+        }
+
+        .second{
+            position: relative;
+            /* top:20px;
+            left: 50px; */
+            /* from that position only it will start */
+        }
+        .third{
+            position: absolute;
+            top:400px;
+            left:400px
+            /* if the ancestor is any postioned is there it will check if not it will start from the parent body */
+
+        }
+
+    </style>
+</head>
+<body>
+    <div style="border: 2px,solid,green;
+    width: 303px;
+    height: 150px;">
+        Grand
+    </div>
+    <div class="parent">
+        <div class="first" >
+            <p ><h1 style="color: blueviolet;">First</h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown print</p>
+        </div>
+        <div class="second">
+            <p><h1 style="color: blueviolet;">Second</h1>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="third">
+            <p><h1 style="color: blueviolet;">Third</h1>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="fourth">
+            <p>. <h1 style="color: blueviolet;">Fourth</h1>
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </div>
+    
+</body>
+</html>
