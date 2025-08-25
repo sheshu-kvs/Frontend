@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layouts</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      .main-gmg{
+        margin:10px;
+
+      }
+      .container {
+        border: 3px solid black;
+        text-align: center;
+        /* width: 100vh; */
+        width: 100%;
+        
+      }
+      .header {
+        padding: 25px;
+        border: 3px solid black;
+        background-color: red;
+        /* color: white; */
+        margin: 5px;
+      }
+      .nav {
+        padding: 25px;
+        border: 3px solid black;
+        background-color: aqua;
+        /* color: white; */
+        margin: 5px;
+      }
+      .main-content {
+        width: 100%;
+        display: flex;
+      }
+      .left {
+        flex-direction: column;
+        width: 60%;
+      }
+      .section {
+        padding: 30px;
+        margin: 5px;
+        border: 3px solid black;
+        background-color: burlywood;
+      }
+      .Article {
+        padding: 30px;
+        margin: 5px;
+        border: 3px solid black;
+        background-color: orange;
+      }
+      .aside {
+        margin: 5px;
+        padding: 50px;
+        width: 39%;
+        border: 3px solid black;
+        background-color: palevioletred;
+      }
+      .footer {
+        margin: 5px;
+        padding: 25px;
+        border: 3px solid black;
+        background-color: cornflowerblue;
+      }
+      /* ======hover====== */
+      /* .header,.nav:hover{
+        background-color: turquoise;
+        transform: translatex(15px);
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="main-gmg">
+      <div class="container">
+        <div class="header">
+          <h2>header</h2>
+        </div>
+        <div class="nav">
+          <h2>nav</h2>
+        </div>
+        <div class="main-content">
+          <div class="left">
+            <div class="section">
+              <h2>Section</h2>
+            </div>
+            <div class="Article">
+              <h2>Article</h2>
+            </div>
+          </div>
+          <div class="aside">
+            <h2>Aside</h2>
+          </div>
+        </div>
+        <div class="footer">
+          <h2>Footer</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
