@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            grid-template-areas:   "Header Header"
+                                  "Content Sidebar"
+                                  "Footer Footer";
+        }
+      
+        .header{
+            grid-area: Header;
+            background-color: aqua;
+            color: black;
+        }
+        .content{
+            grid-area: Content;
+            background-color: rgb(101, 71, 139);
+            color: black;
+        }
+        .sidebar{
+            grid-area: Content;
+            background-color: rgb(101, 71, 139);
+            color: black;
+        }
+        .footer{
+            grid-area: Content;
+            background-color: rgb(101, 71, 139);
+            color: black;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="content">Content</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
