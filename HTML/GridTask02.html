@@ -19,12 +19,16 @@
         border: 2px solid black;
         display: grid;
         padding: 20px;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(3,auto);
+        /* grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,auto); */
         /* grid-auto-flow: row;  */
         gap: 10px;
         justify-content: center ;
         text-align: center;
+
+        grid-template-rows: "fir t2 t3"
+                             "fir t4 t5"
+                             "fir t7 t8";
        }
        .items{
         border: 2px solid black;
@@ -32,42 +36,12 @@
         color: black;
        }
        .it1{
-       background-color: bisque;
-       grid-row: 1/6;
+       grid-area: fir;
    }
    .it2{
-    background-color: cadetblue;
-    grid-column: 2;
+    grid-area: t2;
    }
-   .it4{
-    background-color:aquamarine;
-    grid-column: 2;
-    grid-row: 2;
-   }
-   .it5{
-     background-color:white;
-    grid-column:3;
-    grid-row: 2;
-    /* width: 50%; */
-   }
-   .it6{
-    background-color: aqua;
-    grid-row: 2/6;
-    grid-column: 3;
-   }
-   .it7{
-    background-color: azure;
-    grid-column:2;
-    grid-row: 3;
-
-   }
-   .it8{
-    background-color: azure;
-     width: 50%;
-    grid-column:3;
-    grid-row: 3;
-
-   }
+   
       
     
       
