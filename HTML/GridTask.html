@@ -75,69 +75,71 @@
   </body>
 </html> -->
 
-
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    *{
-      padding: 0px;
-      margin: 0px;
-      box-sizing: border-box;
-
-    }
-    body{
-      /* width: 100%;
-      height: 100%; */
-    }
-    .container{
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      grid-template-rows: repeat(4,1fr);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 10px;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         width: 100%;
         height: 100%;
+        overflow: hidden;
         padding: 35px;
         gap: 10px;
-      border: 2px solid black;
-    }
-    .items{
-      border: 2px solid black;
-      background-color: yellowgreen;
-      color: black;
-    }
-    .header,.footer{
-      grid-column-start: 1;
-      grid-column-end: 4;
-    }
-    .sidebar{
-       grid-row-start: 2;
-      grid-row-end: 4;
-
-    }
-    .content1{
-      grid-column-start: 2;
-      grid-column-end: 4;
-     
-    }
-    .content2,.content3{
-      width: 200px;
-
-    }
-    
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    <div class="items header">Header</div>
-    <div class="items sidebar"></div>
-    <div class="items content1"></div>
-    <div class="items content2"></div>
-    <div class="items content3"></div>
-    <div class="items footer"></div>
-  </div>
-  
-</body>
+        border: 2px solid #000000;
+        /* align-items:end; */
+        /* text-align: center; */
+        justify-content: center;
+        /* align-content: center; */ 
+      }
+      .items {
+        display: flex;
+        justify-content: center; /* Centers the text horizontally */
+        align-items: center; /* Centers the text vertically */
+        font-family: cursive;
+        border: 2px solid black;
+        background-color: yellowgreen;
+        color: black;
+      }
+      .header,
+      .footer {
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
+      .sidebar {
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+      .content1 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+      /* .content2,
+      .content3 {
+        /* width: 500px; */
+      /* } */ */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items header">Header</div>
+      <div class="items sidebar">SideBar</div>
+      <div class="items content1">Content1</div>
+      <div class="items content2">Content2</div>
+      <div class="items content3">Content3</div>
+      <div class="items footer">Footer</div>
+    </div>
+  </body>
 </html>
