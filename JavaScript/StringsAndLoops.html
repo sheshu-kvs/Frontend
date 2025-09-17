@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -166,4 +167,174 @@ for(let i=50;i<=70;i++){
     }
 }
 </script>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    Strings: it is the sequence of the character enclosed with the double quotes..
+
+    template string (``):inside the string we can use the single quote as we as double quote using the string literal
+     
+    to find the length of the  string we use the 
+    length -property..
+
+
+    let name="alex"
+    let name12='deva'
+
+    console.log("String We can use the Double Quotes ",name)
+    console.log("we can use the single quote inside the string ",name12);
+
+    let Intro=`"I am the 'Java' Developer "`;
+    console.log(Intro);
+
+    let simple_word="hello";
+
+    console.log(simple_word.length);
+     
+     let single='An sentence with the single \'multi\' quote';
+     let multi='An sentence with the double \"multi\" quote';
+     let backslash='An Sentence with the \\"hello\\" values';
+
+     console.log(single);
+     console.log(multi);
+     console.log(backslash);
+
+
+
+      template string :
+      we can also use as the multiline string
+
+
+
+
+     <span id="demo" style="background-color: aqua;"></span>
+
+
+      let text=
+             `Java is the  
+              rapidly growing
+              the language
+              it can be used in
+              the various fields..`;
+
+    console.log(text);
+
+    document.getElementById("demo").innerHTML=text;
+
+    we can also declare the string using to create the object in the string using in the string object 44
+
+
+     // in the template string we can also interpolation in the string..
+    // ${} we can also use the expression!!
+    let firstName="devan";    
+    let secondname="giri";
+
+    let a=120;
+    let b=1232;
+    let text=`welcome to the world!! ${firstName} and the ${secondname} ...`;
+
+    console.log(text);
+
+    console.log(`Values of the a and the b ${a+b} to be printed!!`);
+
+
+    let s1=new String("john");
+    let s2=new String("john");
+
+    console.log("=== it alwasys returns the false (javascript object cannot be compared) with the different objects ",s1===s2);
+    console.log("== (javascript object cannot be compared it always return the false)  ",s1==s2);
+
+     -->
+
+
+     
+
+
+    
+</body>
+
+<script>
+
+for(let i=0;i<10;i++){
+    console.log(i);
+}
+// using the for loop 
+console.log("Multiplication of the two numbers ");
+let num=2;
+for(let i=1;i<=10;i++){
+    console.log(num," X ",i," = ",(num*i));
+}
+
+// Using the while loop
+let  i=1;
+while(i<=10){
+  console.log(num," X ",i," = ",(num*i));
+  i++;
+}
+// let  i=1;
+do{
+     console.log(num," X ",i," = ",(num*i));
+     i++;
+}while(i<=10);
+
+
+console.log("Printing the Even Numbers ");
+for(let i=2;i<=10;i=i+2){
+    console.log(i);
+}
+let name="madam";
+let t="";
+for(let i=name.length;i>=0;i--){
+    t=t+name.charAt(i);
+}
+console.log(t);
+if(t===name){
+    console.log("Palindrome")
+}
+else{
+    console.log("Not palindrome");
+}
+
+
+let k=90;
+let val=[12,45,78,90];
+for(num of val){
+    if(num==k){
+        console.log("Found..")
+        break;
+    }
+    else{
+        console.log("Not Found.")
+        
+    }
+   
+}
+
+// let val=[12,45,78,90,1];
+
+let max=val[0];
+// for(let i=0;i<val;i++){
+for(const val12 of val){
+    if(val12<max){
+        max=val12;
+    }
+}
+
+console.log(max);
+
+console.log()
+for(let i=50;i<=70;i++){
+    if(i%2 != 0){
+        console.log(i);
+    }
+}
+</script>
+>>>>>>> 70d0c44447ef3c760dd20b0910c25afdd8d83211
 </html>
