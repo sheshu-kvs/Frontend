@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    an for each loop are used to print the each element in the array ,
+    and we can also use has the higher order function,
+    which means inside the foreach we can use the function as well as the 
+    like the paramter and in the function we return this is called has the callback function.
+     -->
+</body>
+<script>
+    let items=[1,2,3,4,5]
+
+    // items.forEach(function myfun(val) {
+    //     console.log(val);
+    // });
+
+    // with the arrow function
+    items.forEach((val) => {
+        console.log(val);
+    });
+
+    // inside the for each we can also use the index and the array itself we can use
+
+    items.forEach((val,idex) =>{
+        console.log(val,idex);
+
+    })
+
+    // we can pass the three parameters like the val,idx,arr itself
+   items.forEach( (val,idx,items) =>{
+    console.log(val,idx,items);
+   })
+    
+     //prac  question prin square of the each number in the Array
+
+     items.forEach( (val) => {
+        console.log(val*val);
+
+     })
+
+
+</script>
+</html>
