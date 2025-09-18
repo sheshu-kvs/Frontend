@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    map: that will return the array 
+    filter: filter the values based on the condition 
+    reduce: will return only the single value.. -->
+    
+</body>
+<script>
+
+    items=[1,2,133,4,5];
+    items1=[-12,-1,-90,-80,1]
+
+
+    const values=items.map((val)=>{
+        // console.log(val);
+        return val*val;
+    });
+
+    console.log(values);
+
+
+    // print only the even numbers we applieed the filter so based on the condition  it will filter;
+
+    const even=items.filter((val) => {
+        return val % 2 == 0;
+    })
+    console.log(even);
+
+    // print only the odd numbers
+
+    const odd = items.filter( (val) => {
+        return val % 2 != 0;
+    })
+    console.log(odd);
+
+
+    // reduce will give only the single val 
+    // for ex calculate the sum of the values in the array
+
+    const sum=items.reduce( (res ,current) => {
+        return res + current;
+    })
+
+    console.log(sum);
+
+    // print the max val in the array
+
+    const max_value=items1.reduce( (prev,next) => {
+        return prev > next ? prev : next; 
+
+    });
+    console.log(max_value);
+
+
+
+</script>
+</html>
