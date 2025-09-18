@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // without the arrow function
+    function countVowels(name){
+      let vowel='aeiou';
+      let lower=name.toLowerCase();
+      let count=0;
+      for(let i=0;i<lower.length;i++){
+        let eachchar=name.charAt(i);
+        if(eachchar=='a'||eachchar=='e'||eachchar=='i'||eachchar=='o'||eachchar=='u'){
+            count++;
+        }
+      }
+      console.log(count);
+
+    }
+
+
+    const countVowel=(name) =>{
+        let count=0;
+        for(let val12 of name){
+            if(val12 == 'a' || val12== 'e' || val12=='i' || val12=='o' || val12 == 'u'){
+                count++;
+            }
+        }
+        console.log(count);
+    };
+
+
+
+
+
+    // let word="hello";
+
+    // for(let word12 of word){
+    //     console.log(word12);
+    // }
+   
+    countVowel("hello");
+    countVowels("hello world")
+
+
+    // forof loop are used to only the get the value majorly we cannot get the index
+    // for if we want the reverse the array we cannot reverse according to the index only we reverse..
+
+    let items=["apple","banana","pineapple","guva"];
+
+    for(let val of items){
+        // console.log(val);
+        if(val=='apple'){
+            val='pineapple';
+        }
+        console.log(val);
+    }
+
+</script>
+</html>
