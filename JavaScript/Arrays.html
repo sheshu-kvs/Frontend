@@ -12,11 +12,81 @@
     
 </body>
 <script>
+    // marks of the 5 students.
     let marks=[92,89,56,75,87];
-    console.log(marks[3]);
+    console.log(marks.length)
+    console.log(typeof marks)
+    // console.log(marks[3]);
     for(let val of marks){
-        console.log(marks[val])
+        console.log(val)
     }
+
+    // fruits in the array.
+    let fruits=["apple","banana","qwivi","grapes"]
+    console.log(fruits);
+    console.log(fruits[3]);
+    console.log(typeof fruits);
+
+    // Mixed data in the Array.
+    let mixed_data=["apple",90,"true",67.67];
+    console.log(mixed_data);
+    console.log(mixed_data[3]);
+
+    // creating the empty array
+
+    let empty=[];
+    console.log(empty.length);
+
+// printing the each city in the Uppercase.. 
+    let city=["Banglore","Hyderbad","Delhi","Anatapur"];
+    for(let val of city){
+        console.log(val.toUpperCase());
+    }
+
+    // finding the index of the array
+    let val="Delhi";
+    for(let i=0;i<city.length;i++){
+        // console.log(city[i]);
+        if(city[i]==val){
+            // console.log("Index of the String ",i);
+            continue;
+        }
+        console.log(city[i]);
+       
+    }
+
+
+    // find the avg marks of the entire class
+
+     let marks2=[92,89,56,75,87];
+     let n=marks2.length;
+     let sum=0;
+     for(let val of marks2){
+       sum=sum+val;
+     }
+     console.log(`Average marks ${sum/n}`)
+
+
+    //  array prices with the 5 items [250,645,300,900,50];
+    // applay the 10% offer for all the items
+     
+    let items=[250,645,300,900,50];
+    let offer;
+    // for(let i=0;i<items.length;i++){
+    //     offer=items[i]*10/100;
+    //     items[i]=items[i]-offer;
+    //     console.log(items[i]);
+    // }
+
+    let i=0;
+    for(let val of items){
+        let offer=val*10/100;
+        items[i]=items[i]-offer;
+        console.log(items[i])
+        i++;
+        
+    }
+
 
 </script>
 </html>
