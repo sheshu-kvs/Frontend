@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    
+</body>
+
+<script>
+    let a=[];
+    let k=0;
+    for(let i=1;i<=100;i++){
+    //  console.log(i);
+    if(i%2==0){
+        a[k++]=i;
+        // console.log(i);
+    }
+    }
+    console.log("Even Numbers from 1 to 100 ")
+    for(val of a){
+        console.log(val);
+        // document.getElementById("demo").innerHTML=val;
+    }
+</script>
+
+
+
+</html>
