@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Write a program to print numbers from 1 to 10 using a while loop.
+    // let num=1;    
+    // while(num<=10){
+    //     console.log(num);
+    //     num++;
+    // }
+
+    // Write a program to print even numbers from 2 to 20 using a while loop.
+
+    // let num1=2;
+    // while(num1<=20){
+    //     if(num1%2==0){
+    //         console.log(num1);
+    //     }
+    //     num1++;
+    // }
+
+    // Write a program to calculate the sum of numbers from 1 to 50 using a while loop.
+
+    // let sum=0;
+    // let num2=1;
+    // while(num2<=50){
+    //     sum=sum+num2;
+    //     num2++;
+    // }
+    // console.log(sum);
+
+
+    // Write a program to reverse a number using a while loop (e.g., input: 123 → output: 321).
+
+    let rev=0;
+    let num3=123;
+    while(num3>0){
+        let rem=num3%10;
+        rev=rev*10+rem;
+        num3=Math.floor(num3/10);
+    }
+    console.log(rev)
+
+    // Write a program to print the multiplication table of a given number using a while loop.
+
+    let num4=5;
+    let i=1;
+    while(i<=10){
+        console.log(num4," X ",i," = ",(num4*i));
+        i++;
+    }
+
+    // Write a program to find the factorial of a number using a while loop.
+    let fact=1;
+    let num5=5;
+    while(num5>0){
+        fact=fact*num5;
+        num5--;
+    }
+    console.log("Fact Num ",fact);
+
+    // Write a program to print the Fibonacci series up to 100 using a while loop.
+
+    // let first=0;
+    // let second=1;
+    // let i2=0
+    // while(i2<100){
+    //     console.log(first);
+    //     let next=first+second;
+    //     first = second;
+    //     second =next;
+    //     i2++;
+    // }
+
+
+    // Write a program to count the number of digits in a number using a while loop.
+
+    let num123=123;
+    let count=0;
+    while(num123>0){
+        // let rem=num123%10;
+          count++;
+        num123=Math.floor(num123/10);
+      
+    }
+    console.log("Number of the digit",count);
+
+
+</script>
+</html>
