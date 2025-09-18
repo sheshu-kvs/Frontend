@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let company=["Bloomberg","Microsoft","Uber","Google","IBM","Netflix"];
+   
+    // remove the first company of the array
+    console.log(company.pop());
+    console.log(company)
+
+    // remove the uber add ola in it place
+    // company[2]=ola;
+    // console.log(company);
+
+    company.splice(2,1,"ola");
+    console.log(company)
+
+    // to add the element at the first
+    console.log(company.unshift("TCS"));
+    console.log(company);
+    // to remove the element at first
+    console.log(company.shift());
+    console.log(company);
+
+    // to modify the specific index then in particular place replacing the item
+       company.splice(2,1,"NTTDATA");
+       console.log(company);
+
+
+
+</script>
+</html>
