@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    Function is the set of the instruction it is used to perform the specific task..
+    ,it is also the block of code, 
+     -->
+    
+</body>
+
+<script>
+    // calling the function
+    // with zero parameter
+
+    // with no parameter
+    function myfun12(){
+        console.log("Welcome the javascript world!!");
+    }
+    myfun12();
+    // function with the parameter
+    function myfun(a,b){
+        console.log(a*b);
+    }
+    
+    
+
+    // calling the function with the arguments
+    myfun(3,4);
+
+
+    // arrow function is the modern writing the code 
+    // => sign of the arrow function
+    // () inside the paramter we can pass the arguments
+
+//  with the param
+    const val = (a,b)=>{
+        console.log("Mul ",a*b)
+    };
+
+    val(9,12);
+
+    // in the function wew can also return 
+    const sum = (a,b) => {
+        console.log("before the return");
+        return a+b;
+        console.log("After the return will not excute ")
+    };
+
+    let resSum=sum(1000,500);
+
+    console.log(resSum);
+
+
+    
+
+    
+
+
+</script>
+</html>
