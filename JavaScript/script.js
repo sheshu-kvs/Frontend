@@ -13,9 +13,9 @@
 // // to access the html content with the id we can getElementById()
 
  let id=document.getElementById("id").innerHTML="This is the id select from the Html"
-//  console.dir(id)0000000000000
-//  console.log(id)000000000000
-let class12=docu0000000000000000000000000000000000000000000000000000000000000ment.getElementsByClassName("p-class");
+//  console.dir(id)
+//  console.log(id)
+let class12=document.getElementsByClassName("p-class");
 
 // getElementsByClassName : it will return the collection of the elements like the array
 // to display that values we can iterate 
@@ -27,19 +27,16 @@ let class12=docu0000000000000000000000000000000000000000000000000000000000000men
 
 
 
-let singleclass=document.getElementsByTagName("p");
+// let singleclass=document.getElementsByTagName("p");
 
-for(let val of singleclass ){
-    val=val.innerHTML="Hello of multiple class with iteration";
-    console.log(val);
-}
+// for(let val of singleclass ){
+//     val=val.innerHTML="Hello of multiple class with iteration";
+//     console.log(val);
+// }
 // console.log(singleclass);
 
 
+// let tagName12=document.querySelector("#demoid");
+let tagName12=document.querySelector(".rem");
 
-
-
-
- 
-
-let 
+console.log(tagName12.tagName);

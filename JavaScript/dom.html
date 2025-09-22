@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
+ 
 
         <!-- upto querySelectorAll
         <h1>Heading Tag</h1>
@@ -19,15 +19,43 @@
         <p class="p-class">this is the  ..</p>
         <P>paragraph content</P>
         <button>submit</button> -->
-        <div>
+        <div class="main-container">
             <ul>
-                <li>apple</li>
-                <li>manago</li>
+                <li id="id1">apple</li>
+                <p id="demoid">Heloo Js</p>
+                <li class="rem ">manago</li>
+                <span style="display: none;">An Hidden text it will not display on the innerText,
+                    and textContent will display the hidden text also..
+                </span>
                 <li>banana</li>
             </ul>
         </div>
-    </div>
     <script src="script.js">
+
+        // it will return the name of the tag.
+        // let tagName12=document.querySelector("#demoid");
+        // console.log(tagName12.tagName);
+
+        // The innerText it will display the  content inside the body 
+    //    let innertext12 = document.querySelector(".main-container");
+    // //    console.log(innertext12.innerText);
+    //    let val=innertext12.innerText="sheshu"; //it will replace content with name sheshu
+    //    console.log(val)
+      
+    //    innerHTML are used to display all the content and
+    //  also include all the tags and also it includes the hidden content..
+
+    //    let innerhtml12 = document.querySelector(".main-container");
+    // //    console.log(innerhtml12.innerHTML);
+    //    let val=innerhtml12.innerHTML="sheshu"   // changing all the content to name sheshu
+    //    console.log(val);
+
+
+
+    // textContent will display all the content and also inside the content and also includes the hiiden content
+
+           let innerhtml12 = document.querySelector(".main-container");
+           console.log(innerhtml12.textContent);
 
     </script>
 </body>
