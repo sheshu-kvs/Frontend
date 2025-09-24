@@ -10,71 +10,74 @@
         padding: 0px;
         box-sizing: border-box;
       }
-      .main-box{
+      .main-box {
         display: flex;
+        justify-content: center;
         color: white;
-        /* width: 500px; */
+        margin-top: 80px;
+        margin-bottom: 90px;
+        align-items: center;
+        text-align: center;
+      }
+      .content {
+        background-color: rgb(24, 22, 22);
+        height: 463px;
+        padding: 40px;
       }
 
-      
       body {
         background-color: black;
         font-family: cursive;
       }
-      #h2 {
-        /* color: aliceblue; */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+
+      .second-container {
+        background-color: #18311d;
+        padding: 30px;
       }
-      .main-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      form {
-        margin-top: 100px;
-      }
+
       input {
-        background-color: black;
+        background-color: #18311d;
         color: white;
         height: 100px;
         width: 350px;
         border: none;
         outline: none;
-        padding: 5px;
-        border-bottom: 3px solid #006a67;
+        border-bottom: 1px solid #6ec5c2;
       }
 
       #btn {
         padding: 10px;
-        width: 100px;
-        border: 3px solid #006a67;
-        background-color: #006a67;
+        width: 150px;
+        border: 2px solid #2ed6d1;
+        background-color: black;
+        color: white;
         border-radius: 7px;
-        margin-top: 10px;
-        margin-left: 35%;
+        margin-top: 30px;
+        margin-left: 10%;
         cursor: pointer;
+      }
+      img {
+        padding: 20px;
+        border-radius: 50%;
       }
     </style>
   </head>
   <body>
-   <div class="main-box">
-     <div class="content">
+    <div class="main-box">
+      <div class="content">
         <h2>Mission to Deep Space</h2>
-        <img src="" alt="">
+        <img src="circleimg.png" alt="" />
         <p>The Future is Here</p>
+      </div>
+      <div class="second-container">
+        <form action="">
+          <h2 id="h2">Sign Up</h2>
+          <input type="text" placeholder="Name" /><br />
+          <input type="password" placeholder="Password" /><br />
+          <input type="emai" placeholder="Email" /><br />
+          <button id="btn">Join</button>
+        </form>
+      </div>
     </div>
-    <div class="main-container">
-      <form action="">
-        <h2 id="h2">Sign Up</h2>
-        <input type="text" placeholder="Name" /><br />
-        <input type="password" placeholder="Password" /><br />
-        <input type="emai" placeholder="Email" /><br />
-        <button id="btn">Join</button>
-      </form>
-    </div>
-   </div>
   </body>
 </html>
