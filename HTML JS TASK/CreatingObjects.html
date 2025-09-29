@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object & Classes</title>
+  </head>
+  <body>
+    <script>
+      // creating the Js Object using the String literal
+      // let car={
+      //     brand:"Tesla",
+      //     model:"Model Z",
+      //     year:2024,
+      //     start:()=>{
+      //         console.log("car was started ");
+      //     }
+      // }
+      // console.log(car.brand);
+      // car.start()
+
+      // using the new Object() we can create the js Object..
+
+      // let user =new Object();
+      // user.username="John Doe"
+      // user.Age=24
+
+      // console.log(user);
+
+      // using the constructor function
+
+      // function user(name,age){
+      //     this.name=name;
+      //     this.age=age;
+      // }
+
+      // let details=new user("sheshu",24);
+      // console.log(details);
+
+      // creating the classes in the JavaScript
+
+      class person {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+
+        greet() {
+          console.log(
+            `Hi My Name is the  ${this.name} and iam years old  ${this.age}`
+          );
+        }
+      }
+
+      let username = prompt("Enter the Name");
+      let age = prompt("Enter the age");
+      let p = new person(username, age);
+      p.greet();
+    </script>
+  </body>
+</html>
