@@ -38,7 +38,7 @@
       input {
         background-color: #18311d;
         color: white;
-        height: 100px;
+        padding: 42px;
         width: 350px;
         border: none;
         outline: none;
@@ -60,6 +60,14 @@
         padding: 20px;
         border-radius: 50%;
       }
+      input:hover,
+      input:focus {
+        border-bottom: 1px solid yellow;
+      }
+      /* ::placeholder:hover {
+        background-color: #2ed6d1;
+      }
+       */
     </style>
   </head>
   <body>
@@ -72,12 +80,35 @@
       <div class="second-container">
         <form action="">
           <h2 id="h2">Sign Up</h2>
-          <input type="text" placeholder="Name" /><br />
-          <input type="password" placeholder="Password" /><br />
-          <input type="emai" placeholder="Email" /><br />
-          <button id="btn">Join</button>
+          <input type="text" placeholder="UserName" id="username" /><br />
+          <input type="password" placeholder="Password" id="password" /><br />
+          <input type="email" placeholder="Email" id="email" /><br />
+          <button id="btn">Register</button>
         </form>
       </div>
     </div>
   </body>
+  <script>
+    let userName = document.getElementById("username");
+    let password = document.getElementById("password");
+    let email = document.getElementById("email");
+    let btn = document.getElementById("btn");
+
+    let obj = [];
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      let user = {
+        UserName: userName.value, 
+        Password: password.value,
+        Email: email.value,
+      };
+      obj.push(user);
+      console.log("All Registerd Users " + obj);
+
+      for (let val of obj) {
+        console.log(val);
+      }
+    });
+  </script>
 </html>
