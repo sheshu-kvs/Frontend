@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Intro</title>
+  </head>
+  <body></body>
+  <script>
+    // obj=[];
+
+    // let arr=[1,2,3,4,5,6,7];
+    // console.log(arr.length);
+    // console.log(arr[2]);
+    // let k=0;
+    // for(let i=0;i<arr.length;i++){
+    //     obj[k++]=arr[i];
+    // }
+    // console.log(obj);
+
+    // in the var we redclare same variable and the update the same value
+    // in the let we can update the value but the same varibale we cannot declare another once.
+    // i
+    var a = 10;
+    var a = 20;
+    console.log(a);
+
+    let b = 40;
+    let c = b;
+    console.log(
+      "in the let we cannot use the  vairable again once , and we can update the value, but same value we can declare in the another variable ",
+      c
+    );
+
+    const val = 2320;
+
+    console.log(
+      "in the once we declared we cannot update the value and ,we cannot redclare to the aonther variable,and also it should be the intialized  its like the final",
+      val
+    );
+
+    // == and the === difference
+    let name = "5";
+    let num = 5;
+
+    // console.log(name==num);  //it will check only the values not the type i,e is the datatype. it returs true
+    // console.log(name===num);  //it will check only the values as well as the the type i,e is the datatype. it return the false.
+
+    // let arr=[10,20,30,40,50];
+    // for(let val of arr){
+    //   if(val==key){
+    //     console.log("Value to be the found ");
+    //     break;
+    //   }
+    //   else{
+    //     console.log("Value is not found ");
+    //     // break;
+    //   }
+    // }
+
+    function valuetofound(arr, key) {
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == key) {
+          // return "Found";
+          console.log("Found");
+        }
+      }
+      // return "Not Found";
+      console.log("Not Found");
+    }
+    let arr = [10, 20, 30, 40, 50];
+    let key = "200";
+    let values = valuetofound(arr, key);
+    console.log(values);
+  </script>
+</html>
