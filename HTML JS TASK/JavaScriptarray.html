@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions in the Js</title>
+  </head>
+  <body></body>
+  <script>
+    // for in are used to return the values  has the  keys and values..
+
+    // using the for in are used to print the object has the key and the values pair
+    // let user={
+    //   name:"sheshu",
+    //   age:"25",
+    //   ph_number:"8978211926"
+    // }
+    // for(let key in user){
+    //   console.log(key,":",user[key]);
+    // }
+
+    // Functions arrow Functions ()=>{}
+
+    // const sum = (a, b) => {
+    //   console.log(a + b);
+    // };
+    // const name = () => {
+    //   console.log("Hi Js how are u");
+    // };
+    // for (let i = 0; i < 5; i++) {
+    //   name();
+    // }
+    // let a = 10;
+    // let b = 20;
+    // const values = sum(a, b);
+    // console.log(values);
+
+    // for-each loop in the array
+
+    // let arr=[1,2,3,4,5,5,6,7,8,9,10];
+    // const arrayvalues=arr.forEach((val) =>{
+    //   console.log(val);
+    // })
+
+    // console.log(arrayvalues);
+
+    // map: it will create the new array  , it will return all the values in the array
+
+    // let arr=[1,2,3,4,5,5,6,7,8,9,10];
+
+    // const values = arr.map((val) =>{
+    //   return val*val;
+    //   // console.log(val*val);
+    // })
+
+    // console.log(values);
+
+    // let res=values;
+    // console.log(res);
+
+    // filter the array before giving the result condition to applied
+
+    // let arr = [1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10];
+
+    //  let values=arr.filter((val)=>{
+    //   return val%2==0;
+    //  })
+    //  console.log(values);
+
+    // the reduce will return the single values from the array example like the sum of the array values
+
+    // arr_val =[1,2,3,4];
+    // let sum=0;
+    // let valu = arr_val.reduce((sum,val)=>{
+    //  return sum+val;
+    // })
+
+    // console.log(valu);
+
+    // Array Methods in the Js
+    // push are used to add the elements at the end of the array..
+    // pop are used to delete the ele
+
+    let arr = [1, 2, 3, 4, 5, 6, 9];
+    console.log(arr.push(10)); //adds the elements at the end of the array adds
+    console.log(arr.pop()); //this pop are used to delete  the element at the end of the array
+    console.log(arr.unshift(100)); //adds the elements at the starting of the array
+    console.log(arr.shift()); //removes the elements at the
+    console.log(arr);
+
+    // shift are used to remove the element at the starting of the array
+
+    // unshift are used to add the element at the are used to add the element at the start of the array
+
+    // for in, for of, for each
+    // user object are used to
+    let user = {
+      name: "sheshu",
+      class: "alpha",
+      age: "21",
+    };
+    for (let key in user) {
+      console.log("Keys ", key, " : ", user[key]);
+    }
+    // for of are used to return the values without the index  in this we can break and return
+    let arr_val = ["alpha", "beta", "gama", 12, 12, 243, 99343.45, 9056.45];
+    for (let val of arr_val) {
+      console.log(val);
+    }
+
+    //  for each are used only in the arrays we cannot use the break , return
+
+    let demo = arr_val.forEach((val, idx) => {
+      console.log("Index ", idx, "Values ", val);
+    });
+  </script>
+</html>
