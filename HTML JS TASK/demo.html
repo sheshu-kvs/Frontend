@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #d{
+         background-color: yellow;
+         width: 150px;
+         height: 90px;
+         border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Header</h1>
+    <div id="d">
+    </div>
+    <script>
+        let d = document.getElementById('d')
+
+        let htmlcontent="";
+        for (let i = 0; i < 5; i++){
+            //   console.log(i);
+            htmlcontent += `<div> this is the ${i}</div`
+
+        }
+          
+      
+     d.innerHTML=htmlcontent;
+
+
+
+
+    //     const users = [
+    // {
+    //     "name":"ABC",
+    //     "age":24,
+    //     "edu":"PHD",
+    //     "pho":98768764
+    // },
+    // {
+    //     "name":"ABC",
+    //     "age":24,
+    //     "edu":"PHD",
+    //     "pho":98768764
+    // },
+    // {
+    //     "name":"ABC",
+    //     "age":24,
+    //     "edu":"PHD",
+    //     "pho":98768764
+    // },
+    // {
+    //     "name":"ABC",
+    //     "age":24,
+    //     "edu":"PHD",
+    //     "pho":98768764
+    // },
+    // {
+    //     "name":"ABC",
+    //     "age":24,
+    //     "edu":"PHD",
+    //     "pho":98768764
+    // }
+    // ]
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- by default the Javascript programmes can run one after the other this called synchronous
+     imagine like if you are fetching the data from the server then it waits for the  
+      -------Synchronous---
+      
+      def: An Synchrous code can be execute one after the other this means the second task can 
+      be execute the before task 1 to be excuted 
+
+      imagine like the when fetching the 
+     
+     
+     -->
+
+     <script>
+        // console.log("Start");
+
+        // setTimeout( ()=>{
+        //     console.log("Async Code Was Running ");
+        // },2000);
+
+        // console.log("End");
+
+
+
+        // Asynchronous  programme it will not wait 
+        // in a hotel there are the one chef is there now his job wants to prepare two dishes ,
+        // one dish he kept on the oven ,for aonther dish  he is preparing for cutting the vegtables..
+
+        // Synchronous 
+        // with the synchronous what happend means like it can be the in hotel chef wants to prepare 
+        // the two items but he prepare the first item after finishes the first item then only he can 
+        // prepare for the next item 
+
+
+        // console.log("Start");
+
+        // setTimeout( ()=>{
+        //     console.log("Async code was runnig ");
+        // },2000);
+
+
+
+        // console.log("End");
+
+
+
+
+        // ====callback function()====
+
+
+        function sayHello(){
+            console.log("Hey Hello this is the JavaScript");
+        }
+        
+        function dowork(callbackfunction){
+            console.log("Working on the SomeThing");
+            callbackfunction();
+        }
+
+        dowork(sayHello);     
+
+
+     </script>    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Write a program that shows an alert box when you click a button. -->
+    <button id="btn" onclick='alert("button was clicked ")'>Submit</button>
+    <!-- Add an event listener to a paragraph so that when you hover the 
+     mouse over it, the text color changes to red. -->
+     <p id="para" onmouseover='console.log("when u hover the color of the text changed to be  the red ")'>when user hover here the the text color changes to the red</p>
+
+     <!-- Create a text input box, and when the user types something, 
+      log it to the console using the input event. -->  
+      <input id="inp" type="text">
+
+      <!-- Add an event listener that changes the background color of the 
+       page when you double-click anywhere. -->
+
+       <button ondblclick='console.log("clicked button two times")'>submit</button>
+
+
+<!-- Add two buttons: "Start" and "Stop". When "Start" is clicked, display the current time
+  every second; when "Stop" is clicked, stop updating the time. -->
+
+  <button>Start</button>
+  <button>Stop</button>
+
+
+     <script>
+        let para=document.getElementById("para");
+        let body=document.body;
+
+
+        para.onmouseover=()=>{
+            body.style.color="red";
+            console.log("when u hover the color of the text changed to be  the red ")
+        }
+
+        body.ondblclick=()=>{
+            body.style.backgroundColor="red"
+        }
+
+
+     
+
+     </script>
+</body>
+</html>

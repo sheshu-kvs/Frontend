@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Create a class Student with properties name
+      and marks, and a method isPass() that checks if marks ≥ 40. -->
+      <script>
+        class student{
+            constructor(name,marks){
+                 this.name=name;
+                 this.marks=marks;
+            }
+            ispass(){
+                if(this.marks>=40){
+                    console.log("Passed");
+                }
+                else{
+                    console.log("Failed");
+                }
+            }
+        }
+
+        let s=new student("sheshu",40);
+        s.ispass();
+        console.log(s);
+      </script>
+</body>
+</html>

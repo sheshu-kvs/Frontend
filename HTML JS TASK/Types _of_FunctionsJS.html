@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+
+
+    <script>
+        // Named Function(function statement and the function declaration both are the same)
+        // Hoisting can be called before they defined
+         greet();
+        function greet(){
+            console.log("Good Morning ");
+        }
+
+        // greet();
+
+
+        // function Expression 
+        // used function as the variable which means function act like as the varibale..
+        // cannot be hoisted we cannot call before they defined
+
+        // const add=function(a,b){
+        //     return a+b;
+        // }
+
+        // console.log(add(4,5))
+
+
+        // difference between the function statement and the function 
+        // expression
+
+        // in the function statement we can call the before declaration 
+        // in the function expression  we cannot call before declaration 
+
+
+
+        // anonymous function an function without the name
+        // an anonymous function used function as the value.. 
+        // function (){
+        //     console.log("hello"); this will throw the syntax error
+        //  where because this require the function name ,
+        // to avoid this we are using anonympus function as the value 
+        // }
+            //   Example==
+
+
+    //   const add=function(a,b){
+    //         return a+b;
+    //     }
+
+    //     console.log(add(4,5))
+
+
+
+    // Named Function Expresssions
+
+
+    // let b = function xyz(){
+    //     console.log("b called")
+    // }
+
+    // b();
+
+
+
+    // difference between the function and the parameters in the
+
+// function sum(a,b){  //this is the parameter
+//     return a+b;
+// }
+
+// let val=sum(4,5);   //this is the values which are passed inside the function is called as the arguments 
+// console.log(val);
+//     // with in in the function we can use as the pass the parameters
+
+
+
+
+
+
+
+
+    // first class functions
+    // we can pass the function as the argument 
+    //  with the another function is called as the
+    
+    
+    function sayhello(){
+        console.log("Hello Js ")
+    }
+
+    function greeting(func,mes){
+        console.log("Function ",func,"Message ",mes);
+    }
+    let message="Good Morning";
+    greeting(sayhello,message);
+
+
+    
+
+
+
+
+
+
+// first order function does not take argument as the function
+// does not return the function as the values is called as the function ..
+
+
+// let a=function add(a,b){    //named expression 
+//     return a+b;
+// }
+// console.log(a(12,12));
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

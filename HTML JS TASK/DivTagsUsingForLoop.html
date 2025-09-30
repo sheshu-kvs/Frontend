@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        /* font-family: cursive; */
+        margin: 10px;
+        background-color: #6e8cfb;
+      }
+      #user-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      .box {
+        padding: 10px;
+        width: 220px;
+        border: none;
+        border-radius: 15px;
+        background-color: #f2aebb;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="user-container"></div>
+    <script>
+      const users = [
+        { name: "Arjun Sharma", age: 24, edu: "PHD", pho: 9876543210 },
+        { name: "Priya Singh", age: 28, edu: "M.Tech", pho: 9871234567 },
+        { name: "Rohan Patel", age: 32, edu: "MBA", pho: 9988776655 },
+        { name: "Neha Gupta", age: 26, edu: "B.Sc", pho: 9898989898 },
+        { name: "Vikram Kumar", age: 35, edu: "PHD", pho: 9765432109 },
+        { name: "Sanjana Reddy", age: 29, edu: "B.E.", pho: 9678901234 },
+        { name: "Amit Joshi", age: 30, edu: "M.Sc", pho: 9567890123 },
+        { name: "Kavya Desai", age: 25, edu: "B.A.", pho: 9456789012 },
+        { name: "Siddharth Verma", age: 33, edu: "M.Phil.", pho: 9345678901 },
+        { name: "Ananya Mishra", age: 27, edu: "PHD", pho: 9234567890 },
+        { name: "Rahul Kapoor", age: 31, edu: "B.Tech", pho: 9123456789 },
+        { name: "Divya Nair", age: 26, edu: "M.A.", pho: 9012345678 },
+        { name: "Manish Rao", age: 34, edu: "PHD", pho: 8901234567 },
+        { name: "Shreya Hegde", age: 28, edu: "B.Arch.", pho: 8890123456 },
+        { name: "Tarun Mehra", age: 29, edu: "M.S.", pho: 8765432101 },
+        { name: "Ishita Singhania", age: 30, edu: "PHD", pho: 8654321098 },
+        { name: "Gaurav Bansal", age: 36, edu: "B.Ed", pho: 8543210987 },
+        { name: "Ayesha Khan", age: 25, edu: "M.Pharm.", pho: 8432109876 },
+        { name: "Nikhil Shah", age: 33, edu: "PHD", pho: 8321098765 },
+        { name: "Anjali Bose", age: 27, edu: "M.A.", pho: 8210987654 },
+      ];
+
+      let box = document.getElementById("user-container");
+
+      // for(let i=0;i<5;i++){
+      //     let newdiv=document.createElement('div');
+      //     newdiv.className='box';
+      //     newdiv.textContent=`this is the box ${i+1}`
+      //     box.appendChild(newdiv);
+      // }
+
+      users.forEach((user) => {
+        let new_div = document.createElement("div");
+        new_div.className = "box";
+        new_div.innerHTML = `
+            <p><b>Name:</b> ${user.name} </p>
+            <p><b>Age:</b> ${user.age} </p>
+            <p><b>Education:</b> ${user.edu} </p>
+            <p><b>Phone Number:</b> ${user.pho}</p>`;
+        box.appendChild(new_div);
+      });
+
+
+    </script>
+  </body>
+</html>
