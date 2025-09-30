@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Changing the Styles</title>
+  </head>
+  <body>
+    <h1 id="title"></h1>
+    <p id="para"></p>
+    <img src="circleimg.png" alt="img was not found" id="img" />
+    <h2 id="heading">This is the heading tag</h2>
+    <!-- 
+    
+    task1 Create a <p> with id para.
+    Replace its content with "This text is <b>important</b>" using innerHTML.
+    
+    task2 Create an <h1> with id title.
+    Change its text to "Learning DOM is fun!" using JS.
+    Change its color to blue and font size to 40px
+    
+    task3 Create an <img> tag with id="myImg" and a random image URL.
+    Using JS, change its src to another image URL.
+
+
+    task4 Create a <h2> with id heading.Add a CSS class highlight 
+    (make it yellow background in CSS).
+    Use JS to toggle the highlight class when you run the script.
+    -->
+    <script>
+      //   task 1
+
+      let val = document.getElementById("title");
+      val.innerHTML = "Learning the DOM is the Fun";
+      val.style.color = "blue";
+      val.style.fontSize = "50px";
+
+      //   task 2
+
+      let res = document.getElementById("para");
+      res.innerHTML = "This text is <b>important</b>";
+
+      //   task3 changing the img to the another using the setattribute in the   using the dom
+
+      let imgval = document.getElementById("img");
+      imgval.setAttribute("src", "wrong.png");
+
+      let res_heading = document.getElementById("heading");
+
+      res_heading.classList.add("new-class");
+      //   res_heading.classList.remove('new-class');
+
+      res_heading.classList.replace("new-class", "old-class");
+      
+    </script>
+  </body>
+</html>
