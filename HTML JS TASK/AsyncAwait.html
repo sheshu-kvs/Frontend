@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+
+    <script>
+// comment start
+//         // function hello(){
+//         //     console.log("Helllo");
+//         // }
+
+//         // setTimeout(hello,2000),()=>{  //settimeout are also called as the callback function
+//         //    hello();
+           
+//         // }
+
+//         // console.log("world")
+
+
+
+
+
+//         // for(let  i=0;i<5;i++){
+//         //     let t="";
+//         //     for(let j=0;j<5;j++){
+//         //         // console.log(j)
+//         //         t+=j;
+//         //     }
+//         //     console.log(i,t)
+//         // }
+        
+
+
+//         // immmediately invoked function after the creation it will execute immedeatly??
+//         (function () {
+//             let tempvalue=100;
+//             console.log("I run immediately ??")
+//         })();
+
+//     // callback Function
+//      console.log("call Back Functions Examples..");
+//         function parent(msg,child){
+//             console.log(msg);
+//             child();
+//         }
+
+//         // function child(){
+//         //     console.log("This is the child class");
+//         // }
+
+//         // parent("this is the parent class with",child);
+//         // another type pasing as an argument using the function directly
+//         // parent("this is the parent class with", () =>{
+//         //     console.log("This is the child class");
+//         // })
+
+
+
+//         function sum(a,b){
+//             console.log(a+b);
+//         }
+
+//         function calculator(a,b,sum){
+//             sum(a,b);  //this is the callback rigth
+//         }
+//            calculator(10,15,sum);
+//         // calculator(10,5,sum)
+
+//         comment end;
+
+
+
+// this concept we call it as the callback hell 
+        function getDat(dataid,getdata){
+           
+            setTimeout( ()=>{
+               console.log("data ",dataid);
+               getdata();
+            },2000);
+        }
+        // getDat(1);
+        // getDat(4);
+        // getDat(3);
+        // getDat(2);
+    // we want each getdat(1) individual delay 
+
+
+    getDat(1,()=>{
+        console.log("Getting Data 2");
+        getDat(2 ,()=>{
+            console.log("Getting Data 3")
+            getDat(3,()=>{
+                console.log("Getting Data 4");
+                getDat(4)
+            });  
+        });
+    })
+
+// callback hell are used to the nested with the callbacks it is like the pyramid structure.. 
+// is called as the nested callback..
+
+
+// in this we are using the failure of the asynchronous task..
+// is called as the promise   
+
+// an promise can be the 
+// three states like the 
+// pending, intial state neither fullfill nor reject
+// fulfilled, in this state can be the fulfilled 
+// rejectd  the condition could not satisfy 
+
+
+// setTimeout Example
+
+let promise=new Promise((resolve,reject)=>{
+    setTimeout(() =>{
+        let success=false;
+        if(success){
+            resolve("Operation Successfull!");
+        }
+        else{
+            reject("Operation Failed!");
+        }
+    },2000);
+})
+
+
+promise
+.then(res =>{
+    console.log(res);
+})
+.catch(err =>{
+    console.log(err);
+});
+
+
+// set timeout  are used to the 
+
+    </script>
+
+</body>
+</html>
