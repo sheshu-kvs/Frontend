@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- by default the Javascript programmes can run one after the other this called synchronous
+     imagine like if you are fetching the data from the server then it waits for the  
+      -------Synchronous---
+      
+      def: An Synchrous code can be execute one after the other this means the second task can 
+      be execute the before task 1 to be excuted 
+
+      imagine like the when fetching the 
+     
+     
+     -->
+
+    <script>
+      // console.log("Start");
+
+      // setTimeout( ()=>{
+      //     console.log("Async Code Was Running ");
+      // },2000);
+
+      // console.log("End");
+
+      // Asynchronous  programme it will not wait
+      // in a hotel there are the one chef is there now his job wants to prepare two dishes ,
+      // one dish he kept on the oven ,for aonther dish  he is preparing for cutting the vegtables..
+
+      // Synchronous
+      // with the synchronous what happend means like it can be the in hotel chef wants to prepare
+      // the two items but he prepare the first item after finishes the first item then only he can
+      // prepare for the next item
+
+      // console.log("Start");
+
+      // setTimeout( ()=>{
+      //     console.log("Async code was runnig ");
+      // },2000);
+
+      // console.log("End");
+
+      // ====callback function()====
+
+      // function sayHello(){
+      //     console.log("Hey Hello this is the JavaScript");
+      // }
+
+      // function dowork(callbackfunction){
+      //     console.log("Working on the SomeThing");
+      //     callbackfunction();
+      // }
+
+      // dowork(sayHello);
+
+      // callBack passing the function has an argument and the calling that
+      // function  is called as the callback..
+
+      function saygoodmoring(msg, good) {
+        console.log(msg);
+        good();
+        // in the console if we call good function   without the paranthesis means
+        // it will display entire the function including the paranthesis
+      }
+
+      // function sayMoring(){
+      //     console.log("Morning");
+      // }
+
+      saygoodmoring("Hello Good", () => {
+        //in this arrow function is the call back
+        console.log("Morning"); // we are passsing the argument like this with
+        // the arrow function
+      });
+
+      //   function getdata(id,getnextdata){
+      //     setTimeout(()=>{
+      //         console.log("Data ",id);
+      //         getnextdata();
+      //     },2000);
+      //   }
+ 
+      //   function nextData(val){
+      //     console.log(val);
+      // };
+      // nextData(2);
+
+      // getdata(1,()=>{
+      //     getdata(2);
+      // });
+
+      // getdata(1,nextData(2));  //like this argument we cannot pass
+
+    //   function getdata(id, getnextdata) {
+    //     setTimeout(() => {
+    //       console.log("Data ", id);
+    //       getnextdata();
+    //     }, 2000);
+    //   }
+
+      // function nextData(){
+      //     console.log("Data 2")
+      // };  //this will print the parallely withtout any waiting the both the data
+      //we print the data individually which means printing the first data then after the second data it need to print...
+
+      //callback hell: nested callbacks with the pyramid like the strucrture
+      //   getdata(1,()=>{            //in this passing the value and the function
+      //     getdata(2,()=>{
+      //       getdata(3,()=>{
+      //         getdata(4);
+      //       });
+      //     });
+      //   });
+
+      //   to avoid the call back hell we can use the promises
+
+
+    //   PROMISE
+    // An promise this is the solution of the callback hell
+
+    // to use the promise we can create the object using the :: new
+
+    // in this there are the three stages are there 
+
+    // pending
+    // resolve(successfull)
+    // reject
+
+
+    // let promise=new Promise((resolve,reject)=>{
+    //    console.log("Succesfully we are using the promise");
+    // //    resolve("This is the promise state..")
+    //     reject("This is the reject state ");
+    // })
+
+
+    // const async1 =function getData(){
+    //         return new Promise((resolve,reject)=>{
+    //          setTimeout(()=>{
+    //          console.log("data 1")
+    //          resolve("succes");
+    //         },5000);
+    //        })
+    // }
+
+
+    //   const async2 =function getData(){
+    //        return new Promise((resolve,reject)=>{
+    //          setTimeout(()=>{
+    //          console.log("data 2")
+    //          resolve("succes");
+    //         },5000);
+    //        })
+    // }
+
+    // console.log("Fetching Data 1");
+    // let promise1 = async1();
+    // promise1.then((res)=>{
+    //     console.log("Fetching Data 2");
+    //     let promise2= async2();                 //it will print the one after the other..
+    //     promise2.then((res)=>{
+    //     })
+    // });
+    
+// or
+
+
+    // console.log("Fetchind data 1");
+    
+    // async1().then((res)=>{
+    //     console.log("Fetching Data 2")
+    //     async2().then((res)=>{
+    //     })
+    // })
+
+ // let promise1 = async1();
+    // promise1.then((res)=>{
+    //     console.log(res);            by doing this it will print the parlley without any time gap after the 
+    //                                  // 4 sec both will print parlley
+    // });
+
+
+
+
+
+
+    // let promise2 = async2();
+    // promise2.then((res)=>{
+    //     console.log(res);            by doing this it will print the parlley without any time gap after the 
+    //                                  // 4 sec both will print parlley
+    // });
+
+
+
+
+    // function getData(id){
+    //    return new Promise((resolve,reject)=>{
+    //      setTimeout(()=>{
+    //       console.log("Data ",id);
+    //       resolve("sucess");
+    //     },2000);
+    //    })
+    // }
+// promise chaining one after the other
+// .then
+    // getData(1).then((res)=>{
+    //     // console.log(res);
+    //     getData(2).then((res)=>{
+    //         getData(3).then((res)=>{
+    //         })
+    //     })
+    // })
+
+
+    // or
+//actual way of writing the promise.
+    // getData(1).then(()=>{
+    //     return getData(2)
+    // })
+    // .then(()=>{
+    //     return getData(3); 
+    // })
+    // .then(()=>{
+
+    // })
+
+
+// Async Await are used to the stop the Process of the Async
+
+
+function getdata(id){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("Data ",id);
+            resolve("success");
+        },2000)
+    })
+}
+
+
+async function getalldata() {
+  await getdata(1);
+  await getdata(2);
+  await getdata(3);
+}
+
+
+
+
+    // Example of the promise chaining
+
+    // Step 1: Function that returns a promise
+// function getUser() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("✅ Got the user");
+//             resolve({ id: 1, name: "Dev" });
+//         }, 1000);
+//     });
+// }
+
+// function getOrders(userId) {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log("✅ Got orders for user:", userId);
+//             resolve(["Order1", "Order2"]);
+//         }, 1000);
+//     });
+// }
+
+// function getOrderDetails(order) {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log("✅ Got details for:", order);
+//             resolve({ order, price: 500 });
+//         }, 1000);
+//     });
+// }
+
+// // Step 2: Promise Chaining
+// getUser()
+//     .then(user => {
+//         return getOrders(user.id);   // Pass user id
+//     })
+//     .then(orders => {
+//         return getOrderDetails(orders[0]); // Take first order
+//     })
+//     .then(details => {
+//         console.log("Final Result:", details);
+//     })
+//     .catch(err => {
+//         console.error("❌ Error:", err);
+//     });
+
+
+
+    
+    
+
+
+    </script>
+  </body>
+</html>
