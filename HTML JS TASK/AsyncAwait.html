@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CallBack, CallBack Hell, Promises, Promise chaining, Async await</title>
 </head>
 <body>
 
@@ -78,13 +78,13 @@
 
 
 // this concept we call it as the callback hell 
-        function getDat(dataid,getdata){
+        // function getDat(dataid,getdata){
            
-            setTimeout( ()=>{
-               console.log("data ",dataid);
-               getdata();
-            },2000);
-        }
+        //     setTimeout( ()=>{
+        //        console.log("data ",dataid);
+        //        getdata();
+        //     },2000);
+        // }
         // getDat(1);
         // getDat(4);
         // getDat(3);
@@ -92,16 +92,16 @@
     // we want each getdat(1) individual delay 
 
 
-    getDat(1,()=>{
-        console.log("Getting Data 2");
-        getDat(2 ,()=>{
-            console.log("Getting Data 3")
-            getDat(3,()=>{
-                console.log("Getting Data 4");
-                getDat(4)
-            });  
-        });
-    })
+    // getDat(1,()=>{
+    //     console.log("Getting Data 2");
+    //     getDat(2 ,()=>{
+    //         console.log("Getting Data 3")
+    //         getDat(3,()=>{
+    //             console.log("Getting Data 4");
+    //             getDat(4)
+    //         });  
+    //     });
+    // })
 
 // callback hell are used to the nested with the callbacks it is like the pyramid structure.. 
 // is called as the nested callback..
@@ -119,31 +119,185 @@
 
 // setTimeout Example
 
-let promise=new Promise((resolve,reject)=>{
-    setTimeout(() =>{
-        let success=false;
-        if(success){
-            resolve("Operation Successfull!");
-        }
-        else{
-            reject("Operation Failed!");
-        }
-    },2000);
+// let promise=new Promise((resolve,reject)=>{
+//     setTimeout(() =>{
+//         let success=false;
+//         if(success){
+//             resolve("Operation Successfull!");
+//         }
+//         else{
+//             reject("Operation Failed!");
+//         }
+//     },2000);
+// })
+
+
+// promise
+// .then(res =>{
+//     console.log(res);
+// })
+// .catch(err =>{
+//     console.log(err);
+// });
+
+
+// let promise = new Promise((resolve,reject) => {
+//     // console.log("Hello");
+//     resolve("World");
+//     // reject("hello");
+
+// }) 
+
+
+
+// let promise1 =new Promise((resolve,reject)=>{
+//     let sucsess =true;
+//     if(sucsess){
+//         resolve("Data is been fetched Sucessfuly");
+//     }
+//     else{
+//         reject("Something Went wrong");
+//     }
+// })
+
+// promise1
+// .then(res =>{
+//     console.log(res);
+// })
+// .catch( err =>{
+//     console.log(err);
+// })
+
+// Create a Promise that resolves after 3 seconds with the message "Hello World!".
+
+
+let promise3 = new Promise((resolve,reject)=>{
+    setTimeout( ()=>{
+     resolve("Hello Wolrd!");
+    },3000)
+
 })
 
-
-promise
-.then(res =>{
+promise3 .then((res)=>{
     console.log(res);
 })
-.catch(err =>{
-    console.log(err);
-});
+
+.catch( res=>{
+    console.log(res)
+})
 
 
-// set timeout  are used to the 
+
+// Write a function checkNumber(num) that returns a Promise:
+// Resolves if num is even → "Even number"
+// Rejects if num is odd → "Odd number"
+
+let promise4 = new Promise((resolve,reject)=>{
+        let num=3;
+        if(num%2==0){
+            resolve("even Number");
+        }
+        else{
+            reject("Odd Number");
+        }
+      }
+)
+
+promise4.then( res=>{
+    console.log(res);
+})
+
+.catch( res=>{
+    console.log(res);
+})
+
+
+// Some Examples of the CallBack..
+
+
+// remember in the Promise there is the 3
+// states 
+// pending
+// resolve (successfull)
+// reject(error)
+
+
+let promise5 =new Promise((resolve,reject)=>{
+      console.log("hello world");
+    //   resolve("Succesfully message");
+      reject("Something Went Wrong..")
+})
+
+console.log(promise5)
+
+
+let promise6=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("Hello World with 2 Sec time limit");
+        },2000);
+})
+
+promise6.then( ()=>{
+console.log("Succesfull");
+})
+
+// simulating an the api in the promise
+
+
+function fetchData(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+          let jsondata={"username":"sheshu","id":123};
+          resolve(jsondata)
+        },2000);
+    })
+}
+
+fetchData()
+.then( (user) =>{
+console.log("Succesfuly Found ",user);
+})
+
+.catch((res)=>{
+    console.log("Something went wrong");
+})
+
+
+
+
+// promise chaining are used to call then we call the  
+
+
+function add(x){
+    new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+          resolve(x+2);
+        },1000)
+    })
+}
+
+
+function multiply(x){
+    new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+             resolve(x*5)
+        },1000)
+    })
+}
+
+
+add(5)
+.then( (val)=> {
+    console.log("Result ",val);
+    return multiply(val);
+})
+.then((val) => {
+console.log("After Multipling With The Result ",val);
+})
+.catch(()=>{
+    console.log("Something Went Wrong!!");
+})
 
     </script>
-
 </body>
 </html>
