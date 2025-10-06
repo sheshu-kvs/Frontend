@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First-Class-Function && Higher-Order-Function && First-Order-Functions</title>
+</head>
+<body>
+    <!-- 
+    // First-Class Functions
+       Rules
+       Store them as the variable
+       Pass as an argument.
+       return from the another function..
+
+    //Higher Order Function 
+      Rules 
+      -Takes the Function as the argument
+    -->
+    
+    <script>
+        // First Rule Store them as the Variable
+        // Passs them as the argument
+        const Wish=function hi(){
+            console.log("Hello");
+        }
+
+
+
+        function greeting(fn){
+            fn();  //calling the Function we received.
+        }
+        greeting(Wish);  //passing as the argument.
+
+
+        function outer(){
+            return function inner(){
+                console.log("This is the inner function ");
+            }
+        }
+
+        let value=outer();
+        value();
+
+
+
+        // Higher Order Function 
+        // Takes the Function as the Argument
+         console.log("Higher Order Function ");
+        function hi(){
+            console.log("Say hello"); //this is the callback..
+        }
+
+        function disp(fn){
+            fn();
+        }
+
+        disp(hi);
+
+
+        // -Second Rule
+        //  returns the Function 
+
+        function add(val){
+            return  function sum(val2){
+                 console.log(val+val);
+            }
+        }
+
+
+        // let airt=add(5);
+        // airt(5);
+
+    // First-Order Function
+
+    function add(a,b){
+        return a+b;
+    }
+    let val=add(10,20);
+    console.log(val)
+
+    </script>
+</body>
+</html>
