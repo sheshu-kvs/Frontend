@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Api</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+
+          body{
+            background-color: #DDEB9D;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 75vh;
+            font-family: cursive;
+          }
+          .container{
+            background-color: #A0C878;
+            /* min-height: 400px; */
+            padding: 8rem;
+            border: none;
+            outline: none;
+            border-radius:2rem ;
+          }
+          #clkbtn{
+            border: none;
+            padding: 2rem;
+            border-radius: 1rem;
+          }
+          #ptag{
+           text-align:start;
+           margin-top: 5rem;
+           /* min-height: 150px; */
+           /* line-height: 1.6; */
+          }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <button id="clkbtn">Click The Button</button>
+    <p id="ptag"></p>
+</div>
+    <script>
+        let btn=document.querySelector("#clkbtn");
+        let paragraphtag=document.querySelector("#ptag");
+        const url = "https://official-joke-api.appspot.com/random_joke";
+        
+
+        btn.addEventListener("click",()=>{
+            const data=async ()=>{
+                // this aync always return the promise so we need 
+            let response= await fetch(url);
+            console.log(response);
+            let val=await response.json();
+            console.log(val);
+            console.log("Joke of the Day");
+            // console.log(val.setup)
+            // console.log(val.punchline)
+            // console.log(val.id)
+            paragraphtag.innerHTML=`
+            <p><b>Setup: </b>${val.setup}</b></p>
+            <p><b>PunchTimes: </b> ${val.punchline}</p>
+            <p><b>Id: ${val.id}</b></p>
+          `
+        }
+         data();
+        })
+        // data();
+    </script>
+</body>
+</html>
