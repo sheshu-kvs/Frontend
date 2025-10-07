@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Named Functions which are used to the which means an function with the name
+        // we can declare the before the creation function 
+
+        greet();
+        function greet(){
+            console.log("Hello");
+        }
+        greet();
+
+
+
+        // An Function with the paramteres
+        // we can also return the function using the return keyword
+
+        function fullname(name1,name2){
+      console.log("Name1 "+name1+" Name2 "+name2);
+        // return name1,"",name2;
+        }
+
+        // remember onething whenever u are returning we need to display using the print statement
+
+        // fullname("Dev","Raja")
+       console.log( fullname("Dev","Raja"))
+        // console.log(name);
+
+
+        // Function Expression 
+
+
+        // An Function are used to store the function in the variable
+// it is not hosting
+
+let funcExpression = function (){
+    // console.log("Hello World this Is the Js Concept ");
+    return "Hello World this Is the Js Concept ";
+    
+}
+
+console.log(funcExpression());
+
+
+
+// the arrow function is the Syntax ()=>{}
+
+let divide =(num1,num2) => {
+    return num1+num2;
+}
+
+console.log(divide(20,10));
+
+
+// anonymous function are used to the an function without the name is called as the anonymous function
+
+// let funcExpression = function (){
+//     // console.log("Hello World this Is the Js Concept ");
+//     return "Hello World this Is the Js Concept ";
+// }
+
+
+
+// callbacks
+function processName(funcname){
+    let name="dev";
+    funcname(name);
+}
+
+
+
+processName(function(name){
+    console.log("Hello",name)
+})
+
+// First-order-Function that does not take the function has the argument and
+//  the does not return the function is called as the first order function.
+
+
+
+
+
+
+
+
+// An Higher Order Function that takes the function has the argument and retun the function
+// for example below the parent function is the higher order function tha 
+// function parent(message,funct){
+//     console.log(message);
+//     funct();
+
+// }
+
+// function child(){
+//     console.log("This is the Child Class");
+// }
+                                                                                         
+// parent("Message from the Parent ",child)
+
+
+
+
+
+// -------------first-class-function 
+// Note: passing the function as the varible calling that variable..
+
+// const fun=function(){
+//     console.log("Say Hello!!");  //this is the first class function 
+//                                // pass the function to the variable
+// }
+
+
+
+// fun();   //calling the variable as the function  
+
+// // ----passing the function as the argument
+// console.log("First-class-functions")
+// function sayhello(){
+//     // console.log("Hi this My Java ");
+//     return "hi this My Java";   //if we return here it will display the  to print this we console.log() .if
+                              
+// }
+
+// function greeting(func,msg){
+//     console.log(func + msg);  //if we call the without paranthesis it will the entire the details of the func with the content
+// }
+
+// greeting(sayhello," this is the JS");
+
+
+
+
+// console.log("CallBack")
+// function parent(child){
+//     // console.log("Parent Has been Called");
+//     console.log(child(),"","Parent Has been Called")
+// }
+// function child(){
+//     return "Child Has been Called";
+// }
+
+// parent(child)
+
+
+// first-class function
+
+// an First Class are used to the 
+// ->store them as the variable,
+// ->pass them as the arguments
+// returning  the functions  
+
+console.log("first-class function");
+// Rules:
+//  Function Store them as the variable 
+// pass them as the Argument
+// we can return the function
+
+
+// first rule :
+// An function store them  as the variable
+
+let val=function mesg(){
+    console.log("Hello World");
+
+}
+val(); //first rule
+
+// Second passs them as the argument
+
+function greet(func){
+func();
+}
+
+// greet(val);
+
+
+    </script>
+</body>
+</html>
