@@ -35,10 +35,12 @@
         border-radius: 1rem;
       }
       .btn {
+        cursor: pointer;
         font-size: 1rem;
+        padding: 1px;
         border: none;
         border-bottom: 2px solid black;
-        border-radius: 3px;
+        border-radius: 8px;
         margin-top: 3px;
         margin-bottom: 3px;
         outline: none;
@@ -68,12 +70,12 @@
       <table>
         <tr>
           <td>Name</td>
-          <td><input type="text" placeholder="Enter the Name" id="name" /></td>
+          <td><input type="text" placeholder="Enter the Name" id="name" required></td>
         </tr>
         <tr>
           <td>Email</td>
           <td>
-            <input type="email" placeholder="Enter the Email" id="email" />
+            <input type="email" placeholder="Enter the Email" id="email" required>
           </td>
         </tr>
         <tr>
@@ -82,30 +84,32 @@
             <input
               type="number"
               placeholder="Enter the Phone Number"
-              id="phonenumber"
-            />
+              id="phonenumber" required>
           </td>
         </tr>
         <tr>
           <td>Address</td>
           <td>
-            <input type="text" placeholder="Enter the Address" id="address" />
+            <input type="text" placeholder="Enter the Address" id="address" required>
           </td>
         </tr>
         <tr>
-       <td colspan="2" style="text-align:center; ">
-          <button id="btn" class="btn">Submit</button>
-          <button id="reg" class="btn">Registered Users</button>
-          <button id="get" class="btn">GetOneUser</button>
-          <button id="del" class="btn">DeleteOneUser</button><br>
-          <label for="">Enter the Name</label>
-          <input type="text" style="padding: 10px" id="srcname" />
-        </td>
-      </tr>
+          <td colspan="2" style="text-align: center">
+            <button id="btn" class="btn" type="button">Submit</button>
+            <button id="reg" class="btn" type="button">Show All
+              sers</button>
+            <button id="get" class="btn" type="button">GetOneUser</button>
+            <button id="del" class="btn" type="button">DeleteOneUser</button
+            ><br />
+            <label for="">Enter the Name</label>
+            <input type="text" style="padding: 10px" id="srcname" />
+          </td>
+        </tr>
       </table>
     </form>
     <div id="para">
       <!-- <h2>All Registered Users</h2> -->
+      <div id="Addeduser"></div>
       <div id="user-list"></div>
     </div>
     <div id="getoneuser"></div>
@@ -124,14 +128,20 @@
         {
           name: "Alice",
           email: "alice@example.com",
-          phonenumber: "111-222-3333",
-          address: "123 Main St",
+          phonenumber: "7204375248",
+          address: "Cannada",
         },
         {
           name: "Bob",
           email: "bob@example.com",
-          phonenumber: "444-555-6666",
-          address: "456 Elm St",
+          phonenumber: "9008532514",
+          address: "Australia",
+        },
+        {
+          name: "Jaya",
+          email: "jaya@gmail.com",
+          phonenumber: "7204375248",
+          address: "Banglore",
         },
       ];
 
@@ -139,8 +149,17 @@
 
       let par = document.querySelector("#para");
 
-      button12.addEventListener("click", (e) => {
-        e.preventDefault();
+      let addeduser = document.querySelector("#Addeduser");
+
+        function addUser(){
+        let userdiv = document.querySelector("#user-list");
+        let deletedbtn = document.querySelector("#deleteoneuser");
+        let oneuser = document.querySelector("#getoneuser");
+        deletedbtn.innerHTML=""
+        oneuser.innerHTML=""
+        userdiv.innerHTML = "";
+
+
         let user = {
           name: name.value,
           email: email.value,
@@ -151,19 +170,25 @@
         a.push(user);
         RegisteredUsers(a);
 
+
         name.value = "";
         email.value = "";
         phonenumber.value = "";
         address.value = "";
+         }
 
-        console.log("Users  ");
-        for (let val of a) {
-          console.log(val);
-        }
+
+      button12.addEventListener("click", (e) => {
+
+        e.preventDefault();
+
+        addUser();
       });
 
       function RegisteredUsers(users) {
         let userdiv = document.querySelector("#user-list");
+         let divtagmessage = document.querySelector("#deleteoneuser");
+         divtagmessage.innerHTML=""
         userdiv.innerHTML = "";
         users.forEach((user) => {
           let newdiv = document.createElement("div");
@@ -180,15 +205,35 @@
 
       register.addEventListener("click", (e) => {
         e.preventDefault();
+        document.querySelector("#getoneuser").innerHTML = "";
         RegisteredUsers(a);
       });
 
       function getOneUser() {
-        let searchName = document.querySelector("#srcname").value;
+        let searchName = document
+          .querySelector("#srcname")
+          .value.trim()
+          .toLowerCase();
         let oneuser = document.querySelector("#getoneuser");
+        let deleteuser = document.querySelector("#deleteoneuser");
+        let userdiv = document.querySelector("#user-list");
+
+        userdiv.innerHTML = "";
+        oneuser.innerHTML = "";
+        deleteuser.innerHTML= "";
+
+        // another method to find the values in the array we use the find
+        // let foundUser=a.find(user=> user.name === searchName);
+
+        // if(foundUser){
+        //   oneuser.innerText=`User Was Found ${searchName}`;
+        // }
+        // else{
+        //   oneuser.innerText=`User Was Not Found ${searchName}`;
+        // }
 
         for (let val of a) {
-          if (val.name === searchName) {
+          if (val.name == searchName) {
             oneuser.textContent = `Search Name Was Found ${searchName}`;
             return;
           }
@@ -204,7 +249,10 @@
       function deleteOneUser() {
         let deleteduser = document.querySelector("#srcname").value;
         let divtagmessage = document.querySelector("#deleteoneuser");
-
+          let userdiv = document.querySelector("#user-list");
+        document.querySelector("#getoneuser").innerHTML = "";
+         userdiv.innerHTML="";
+         divtagmessage.innerHTML="";
         let flag = false;
         for (let i = 0; i < a.length; i++) {
           if (a[i].name === deleteduser) {
