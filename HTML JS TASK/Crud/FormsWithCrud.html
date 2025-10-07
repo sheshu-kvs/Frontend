@@ -9,7 +9,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-      }
+        }
       body {
         background-color: #6fa4af;
         font-family: cursive;
@@ -96,8 +96,7 @@
         <tr>
           <td colspan="2" style="text-align: center">
             <button id="btn" class="btn" type="button">Submit</button>
-            <button id="reg" class="btn" type="button">Show All
-              sers</button>
+            <button id="reg" class="btn" type="button">ShowAllUsers</button>
             <button id="get" class="btn" type="button">GetOneUser</button>
             <button id="del" class="btn" type="button">DeleteOneUser</button
             ><br />
@@ -223,22 +222,22 @@
         deleteuser.innerHTML= "";
 
         // another method to find the values in the array we use the find
-        // let foundUser=a.find(user=> user.name === searchName);
+        let foundUser=a.find(user=> user.name.toLowerCase() == searchName);
 
-        // if(foundUser){
-        //   oneuser.innerText=`User Was Found ${searchName}`;
-        // }
-        // else{
-        //   oneuser.innerText=`User Was Not Found ${searchName}`;
-        // }
-
-        for (let val of a) {
-          if (val.name == searchName) {
-            oneuser.textContent = `Search Name Was Found ${searchName}`;
-            return;
-          }
+        if(foundUser){
+          oneuser.innerText=`User Was Found ${searchName}`;
         }
-        oneuser.textContent = `Search Name Was Not Found ${searchName}`;
+        else{
+          oneuser.innerText=`User Was Not Found ${searchName}`;
+        }
+
+      //   for (let val of a) {
+      //     if (val.name === searchName) {
+      //       oneuser.textContent = `Search Name Was Found ${searchName}`;
+      //       return;
+      //     }
+      //   }
+      //   oneuser.textContent = `Search Name Was Not Found ${searchName}`;
       }
 
       get.addEventListener("click", (e) => {
