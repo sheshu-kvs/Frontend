@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All User Details</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #d9f8c4;
+        font-family: cursive;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        padding: 30px;
+        background-color: #ea9c1b;
+        color: black;
+      }
+      #clkbtn {
+        border: 3px solid transparent;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      #clkbtn:hover {
+        border: 3px solid #5f685a;
+      }
+      #user-container {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .box {
+        margin-top: 20px;
+        background-color: #ea9c1b;
+        padding: 20px;
+        width: 300px;
+        border: none;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>All Users List</h2>
+      <a href="FormsWithCrud.html"><button id="clkbtn">ClickBack</button></a>
+    </header>
+    <div id="user-container"></div>
+    <script>
+      //this will get the details of the local storage items
+      let users = localStorage.getItem("users");
+
+      if (users) {
+        //this will converts the string to the objects
+        users = JSON.parse(users); //if it returns the  string convert it to the array(objects)
+      } else {
+        users = []; //if it returns the null it will be stored in t
+      }
+
+      let userdivtags = document.querySelector("#user-container");
+      // users.forEach((user,index)=>{
+      //       let newdiv = document.createElement("div");
+      //       newdiv.className="box";
+      //       newdiv.innerHTML = `
+      //       <p><b>Name: </b> ${user.name}</p>
+      //       <p><b>Email: </b> ${user.email}</p>
+      //       <p><b>PhoneNumber: </b> ${user.phonenumber}</p>
+      //       <p><b>Address: </b> ${user.address}</p>
+      //       <button >Edit</button>
+      //       <button class="delbtn" data-index="${index}" >Delete</button>
+
+      //       `;
+      //     //   data-index="${index}"  this remember which user btn belngs to
+      //     // class="delbtn" data-index="${index}"
+      //     // class="delbtn" data-index="${index}"
+      //       userdivtags.appendChild(newdiv);
+      // })
+
+      renderuser();
+
+      userdivtags.addEventListener("click", function (e) {
+        if (e.target.classList.contains("delbtn")) {
+          const index = e.target.getAttribute("data-index");
+          deleteuser(index);
+        }
+        if (e.target.classList.contains("editbtn")) {
+          const index = e.target.getAttribute("data-index");
+          editUser(index);
+        }
+        //save Event
+        if (e.target.classList.contains("savebtn")) {
+          const index = e.target.getAttribute("data-index");
+          saveUser(index);
+        }
+        // Cancel Event
+        if (e.target.classList.contains("clsbtn")) {
+          const index = e.target.getAttribute("data-index");
+          cancelUser(index);
+        }
+      });
+
+      // SaveUser Function
+      function saveUser(index) {
+        const userdiv = document
+          .querySelector(`[data-index="${index}"]`)
+          .closest(".box");
+
+        // get the Updated Values in the
+        const UpdatedUser = {
+          name: userdiv.querySelector(".edit-name").value,
+          email: userdiv.querySelector(".edit-email").value,
+          phonenumber: userdiv.querySelector(".edit-ph").value,
+          address: userdiv.querySelector(".edit-address").value,
+        };
+
+        users[index] = UpdatedUser;
+
+        // to show the all the UsersData
+        renderuser();
+
+        alert("User Updated Succesfully ");
+      }
+
+      function cancelUser(index) {
+        renderuser();
+      }
+
+      function deleteuser(index) {
+        if (confirm("Are you sure you want to delete the User")) {
+          users.splice(index, 1);
+          renderuser(); //after deleting we need to update so we are calling the render user again
+        }
+      }
+
+      function editUser(index) {
+        const user = users[index];
+        const userdiv = document
+          .querySelector(`[data-index="${index}"]`)
+          .closest(".box");
+        userdiv.innerHTML = `
+           <p><b>Name: </b> <input type="text" class="edit-name" value="${user.name}"></p>
+           <p><b>Email: </b> <input type="text" class="edit-email" value="${user.email}"></p>
+            <p><b>Phone Number:</b> <input type="text" class="edit-ph" value="${user.phonenumber}"></p>
+            <p><b>Address:</b> <input type="text" class="edit-address" value="${user.address}"></p>
+            <button class="savebtn" data-index="${index}">Save</button>
+            <button class="clsbtn" data-index="${index}">Cancel</button>`;
+      }
+
+      function renderuser() {
+        userdivtags.innerHTML = "";
+        users.forEach((user, index) => {
+          let newdiv = document.createElement("div");
+          newdiv.className = "box";
+          newdiv.innerHTML = `
+              <p><b>Name: </b> ${user.name}</p>
+              <p><b>Email: </b> ${user.email}</p>
+              <p><b>PhoneNumber: </b> ${user.phonenumber}</p>
+              <p><b>Address: </b> ${user.address}</p>
+              <button class="editbtn" data-index= "${index}">Edit</button>
+              <button class="delbtn" data-index="${index}">Delete</button>
+            
+              `;
+          userdivtags.appendChild(newdiv);
+        });
+      }
+    </script>
+  </body>
+</html>
