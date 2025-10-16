@@ -9,7 +9,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        }
+      }
       body {
         background-color: #6fa4af;
         font-family: cursive;
@@ -45,8 +45,21 @@
         margin-bottom: 3px;
         outline: none;
       }
+
+      #user-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .usersdiv {
+        padding: 10px;
+        width: 300px;
+        border: none;
+        border-radius: 15px;
+        background-color: #b4debd;
+      }
       /* input:hover {
-        border-bottom: 10px solid #d97d55;
+        border-bottom: 10px solid #d9755;
       } */
 
       /* @media (max-width: 600px) {
@@ -66,16 +79,31 @@
     </style>
   </head>
   <body>
+    <!-- <h2 id="dispmessage"></h2> -->
     <form action="">
+       <!-- <h2 id="dispmessage"></h2> -->
       <table>
+       <!--  <h2 id="dispmessage"></h2> -->
         <tr>
           <td>Name</td>
-          <td><input type="text" placeholder="Enter the Name" id="name" required></td>
+          <td>
+            <input
+              type="text"
+              placeholder="Enter the Name"
+              id="name"
+              required
+            />
+          </td>
         </tr>
         <tr>
           <td>Email</td>
           <td>
-            <input type="email" placeholder="Enter the Email" id="email" required>
+            <input
+              type="email"
+              placeholder="Enter the Email"
+              id="email"
+              required
+            />
           </td>
         </tr>
         <tr>
@@ -84,13 +112,20 @@
             <input
               type="number"
               placeholder="Enter the Phone Number"
-              id="phonenumber" required>
+              id="phonenumber"
+              required
+            />
           </td>
         </tr>
         <tr>
           <td>Address</td>
           <td>
-            <input type="text" placeholder="Enter the Address" id="address" required>
+            <input
+              type="text"
+              placeholder="Enter the Address"
+              id="address"
+              required
+            />
           </td>
         </tr>
         <tr>
@@ -100,8 +135,15 @@
             <button id="get" class="btn" type="button">GetOneUser</button>
             <button id="del" class="btn" type="button">DeleteOneUser</button
             ><br />
-            <label for="">Enter the Name</label>
-            <input type="text" style="padding: 10px" id="srcname" />
+            <label for="" id="src-label" style="display: none"
+              >Enter the Name</label
+            >
+            <input
+              type="text"
+              id="srcname"
+              style="display: none; padding: 10px"
+            />
+            <!-- <button id="get">get</button> -->
           </td>
         </tr>
       </table>
@@ -123,7 +165,17 @@
       let phonenumber = document.querySelector("#phonenumber");
       let address = document.querySelector("#address");
 
-      const a = [
+      const a = JSON.parse(localStorage.getItem("users")) || [
+        //  it does the two things  like the when
+        //it gets the data from the local storage which means existing user details
+        // if no data is present in the local storage by default in the array stored object
+        // it will display this data
+        // localStorage.setItem("users", JSON.stringify(a))
+        // Save your array of users in the browser, so it won’t disappear on refresh.
+
+        // JSON.stringify : converts array/object to string (required for storage).
+
+        // JSON.parse : converts the string back to usable array/object.
         {
           name: "Alice",
           email: "alice@example.com",
@@ -146,20 +198,44 @@
 
       let body = document.body;
 
-      let par = document.querySelector("#para");
-
       let addeduser = document.querySelector("#Addeduser");
 
-        function addUser(){
-        let userdiv = document.querySelector("#user-list");
+      function addUser() {
+        // let userdiv = document.querySelector("#user-list");
         let deletedbtn = document.querySelector("#deleteoneuser");
         let oneuser = document.querySelector("#getoneuser");
-        deletedbtn.innerHTML=""
-        oneuser.innerHTML=""
-        userdiv.innerHTML = "";
+        let addeduser = document.querySelector("#Addeduser");
+        let message=document.querySelector("#dispmessage");
+        deletedbtn.innerHTML = "";
+        oneuser.innerHTML = "";
+        // userdiv.innerHTML = "";
+        addeduser.innerHTML = "";
 
 
-        let user = {
+
+
+        // checking the validations like the 
+
+        let Username=name.value;
+        let Useremail = email.value;
+        let Userphonenumber = phonenumber.value;
+        let Useraddress=address.value;
+
+
+        //validating the fields if the fields are the empty
+        if(!Username || !Useremail || !Userphonenumber || !Useraddress){
+          addeduser.innerHTML=`<p style=color:black;">Please Fill the Fields</p>`;
+          return;
+        }
+        // if(Use)
+
+
+        if(Userphonenumber>11){
+          addeduser.innerHTML=`<p style="color:black;">Please Enter the 10 Digits Phone Number`;
+            return;
+        }
+        else{
+          let user = {
           name: name.value,
           email: email.value,
           phonenumber: phonenumber.value,
@@ -167,27 +243,51 @@
         };
 
         a.push(user);
-        RegisteredUsers(a);
+        localStorage.setItem("users", JSON.stringify(a)); // Saves the  new data in the local storage
+        RegisteredUsers([user]); //it will display only the newly added user details [new user object]
 
+        // addeduser.innerHTML=`
+        // Successfuly Added the User ${user.name}`;
 
         name.value = "";
         email.value = "";
         phonenumber.value = "";
         address.value = "";
-         }
+        }
 
+
+
+
+
+        // let user = {
+        //   name: name.value,
+        //   email: email.value,
+        //   phonenumber: phonenumber.value,
+        //   address: address.value,
+        // };
+
+        // a.push(user);
+        // localStorage.setItem("users", JSON.stringify(a)); // Saves the  new data in the local storage
+        // RegisteredUsers([user]); //it will display only the newly added user details [new user object]
+
+        // // addeduser.innerHTML=`
+        // // Successfuly Added the User ${user.name}`;
+
+        // name.value = "";
+        // email.value = "";
+        // phonenumber.value = "";
+        // address.value = "";
+      }
 
       button12.addEventListener("click", (e) => {
-
         e.preventDefault();
-
         addUser();
       });
 
       function RegisteredUsers(users) {
         let userdiv = document.querySelector("#user-list");
-         let divtagmessage = document.querySelector("#deleteoneuser");
-         divtagmessage.innerHTML=""
+        let divtagmessage = document.querySelector("#deleteoneuser");
+        divtagmessage.innerHTML = "";
         userdiv.innerHTML = "";
         users.forEach((user) => {
           let newdiv = document.createElement("div");
@@ -196,16 +296,20 @@
                <p><b>Name :</b>  ${user.name}</p>
                <p><b>Email :</b> ${user.email}</p>
                <p><b>Phone Number :</b> ${user.phonenumber}</p>
-               <p><b>Address :</b> ${user.address}</p>`;
+               <p><b>Address :</b> ${user.address}</p>
+                <button id="edbtn">Edit</button>
+                <button id="delebtn">Delete</button>`;
 
           userdiv.appendChild(newdiv);
         });
       }
 
-      register.addEventListener("click", (e) => {
+        register.addEventListener("click", (e) => {
         e.preventDefault();
         document.querySelector("#getoneuser").innerHTML = "";
-        RegisteredUsers(a);
+        localStorage.setItem("users", JSON.stringify(a)); //converts the array objects to the json strings
+        window.location.href = "AllUsers.html";
+        // RegisteredUsers(a);
       });
 
       function getOneUser() {
@@ -213,45 +317,58 @@
           .querySelector("#srcname")
           .value.trim()
           .toLowerCase();
+        //validating no user in the field
+
+        if(!searchName){
+          addeduser.innerHTML=`<p style = "color:black">Please Enter the Name </p>`
+          return;
+        }
+
         let oneuser = document.querySelector("#getoneuser");
         let deleteuser = document.querySelector("#deleteoneuser");
         let userdiv = document.querySelector("#user-list");
 
         userdiv.innerHTML = "";
         oneuser.innerHTML = "";
-        deleteuser.innerHTML= "";
+        deleteuser.innerHTML = "";
 
         // another method to find the values in the array we use the find
-        let foundUser=a.find(user=> user.name.toLowerCase() == searchName);
+        let foundUser = a.find((user) => user.name.toLowerCase() == searchName);
 
-        if(foundUser){
-          oneuser.innerText=`User Was Found ${searchName}`;
-        }
-        else{
-          oneuser.innerText=`User Was Not Found ${searchName}`;
+        if (foundUser) {
+          oneuser.innerText = `User Was Found ${searchName}`;
+        } else {
+          oneuser.innerText = `User Was Not Found ${searchName}`;
         }
 
-      //   for (let val of a) {
-      //     if (val.name === searchName) {
-      //       oneuser.textContent = `Search Name Was Found ${searchName}`;
-      //       return;
-      //     }
-      //   }
-      //   oneuser.textContent = `Search Name Was Not Found ${searchName}`;
+        //   for (let val of a) {
+        //     if (val.name === searchName) {
+        //       oneuser.textContent = `Search Name Was Found ${searchName}`;
+        //       return;
+        //     }
+        //   }
+        //   oneuser.textContent = `Search Name Was Not Found ${searchName}`;
       }
 
       get.addEventListener("click", (e) => {
         e.preventDefault();
+        document.querySelector("#src-label").style.display = "inline-block";
+        document.querySelector("#srcname").style.display = "inline-block";
         getOneUser();
       });
 
       function deleteOneUser() {
         let deleteduser = document.querySelector("#srcname").value;
+        // valdating if the filed is empty 
+        if(!deleteduser){
+          addeduser.innerHTML=`<p style="color:black">Please Enter the Name `
+            return;
+        }
         let divtagmessage = document.querySelector("#deleteoneuser");
-          let userdiv = document.querySelector("#user-list");
+        let userdiv = document.querySelector("#user-list");
         document.querySelector("#getoneuser").innerHTML = "";
-         userdiv.innerHTML="";
-         divtagmessage.innerHTML="";
+        userdiv.innerHTML = "";
+        divtagmessage.innerHTML = "";
         let flag = false;
         for (let i = 0; i < a.length; i++) {
           if (a[i].name === deleteduser) {
@@ -281,8 +398,10 @@
         //   }
       }
 
-      del.addEventListener("click", (e) => {
+        del.addEventListener("click", (e) => {
         e.preventDefault();
+        document.querySelector("#src-label").style.display="inline-block";
+        document.querySelector("#srcname").style.display="inline-block";
         deleteOneUser();
       });
     </script>
