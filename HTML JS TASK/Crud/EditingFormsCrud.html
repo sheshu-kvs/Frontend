@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editing Forms With The Crud</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #6fa4af;
+        font-family: cursive;
+      }
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+      }
+      table {
+        padding: 2rem;
+        background-color: #b8c4a9;
+        border-radius: 1rem;
+      }
+      input {
+        padding: 10px;
+        margin-bottom: 3px;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        border-bottom: 2px solid black;
+        border-radius: 1rem;
+      }
+      .btn {
+        cursor: pointer;
+        font-size: 1rem;
+        padding: 1px;
+        border: none;
+        border-bottom: 2px solid black;
+        border-radius: 8px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        outline: none;
+      }
+      input:hover{
+        border-bottom: 3px solid salmon;
+      }
+
+  @media (max-width:600px){
+    table{
+        width:70%;
+    }
+  }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <table>
+        <tr>
+          <td>Name</td>
+          <td><input type="text" placeholder="Enter the Name" id="name" required></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>
+            <input type="email" placeholder="Enter the Email" id="email" required>
+          </td>
+        </tr>
+        <tr>
+          <td>Phone Number</td>
+          <td>
+            <input
+              type="number"
+              placeholder="Enter the Phone Number"
+              id="phonenumber" required>
+          </td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>
+            <input type="text" placeholder="Enter the Address" id="address" required>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center">
+            <button id="subBtn" class="btn" type="button">Submit</button>
+            <button id="reg" class="btn" type="button">ShowAllUsers</button>
+            <button id="get" class="btn" type="button">GetOneUser</button>
+            <button id="del" class="btn" type="button">DeleteOneUser</button
+            ><br/>
+            <label for="">Enter the Name</label>
+            <input type="text" style="padding: 10px" id="srcname" />
+          </td>
+        </tr>
+      </table>
+    </form>
+    <div id="para">
+      <!-- <h2>All Registered Users</h2> -->
+      <div id="Addeduser"></div>
+      <div id="user-list"></div>
+    </div>
+    <div id="getoneuser"></div>
+
+    <div id="deleteoneuser"></div>
+
+    <script>
+      let SubmitBtn = document.querySelector("#subBtn");
+      let name = document.querySelector("#name");
+      let email = document.querySelector("#email");
+      let phonenumber = document.querySelector("#phonenumber");
+      let address = document.querySelector("#address");
+
+      const a = [
+        {
+          name: "Alice",
+          email: "alice@example.com",
+          phonenumber: "7204375248",
+          address: "Cannada",
+        },
+        {
+          name: "Bob",
+          email: "bob@example.com",
+          phonenumber: "9008532514",
+          address: "Australia",
+        },
+        {
+          name: "Jaya",
+          email: "jaya@gmail.com",
+          phonenumber: "7204375248",
+          address: "Banglore",
+        },
+      ];
+
+      let body = document.body;
+
+      let par = document.querySelector("#para");
+
+   
+
+        function addUser(){
+        let deletedbtn = document.querySelector("#deleteoneuser");
+        let oneuserbtn = document.querySelector("#getoneuser");
+        let addeduser = document.querySelector("#Addeduser");
+        deletedbtn.innerHTML=""
+        oneuserbtn.innerHTML=""
+        addeduser.innerHTML=""
+
+        // Each filled value we are storing in the new user object 
+        // so it is easy to push the all the details in the a(array)
+        let user = {
+          name: name.value,
+          email: email.value,
+          phonenumber: phonenumber.value,
+          address: address.value,
+        };
+
+        a.push(user);
+        // After pushing all the user object to the array we need 
+        // to show that values in the registed user values
+        // so we are calling the Registerdusers with the array values
+        RegisteredUsers(a);
+
+      addeduser.innerHTML=`
+      Successfuly Added the User ${user.name}`;
+
+        // Emptying the Fields 
+        name.value = "";
+        email.value = "";
+        phonenumber.value = "";
+        address.value = "";
+         }
+
+
+      SubmitBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        addUser();
+      });
+
+      function RegisteredUsers(users) {
+        let userdiv = document.querySelector("#user-list");
+         let DisablingDeletedUser = document.querySelector("#deleteoneuser");
+         let DisablingOneUser=document.querySelector("#getoneuser");
+         let DisbleaddeduserDetails = document.querySelector("#Addeduser");
+
+         DisablingOneUser.innerHTML="";
+         DisbleaddeduserDetails.innerHTML="";
+         DisablingDeletedUser.innerHTML="";
+         userdiv.innerHTML = "";
+         users.forEach((user) => {
+          let newdiv = document.createElement("div");
+          newdiv.className = "usersdiv";
+          newdiv.innerHTML = `
+               <p><b>Name :</b>  ${user.name}</p>
+               <p><b>Email :</b> ${user.email}</p>
+               <p><b>Phone Number :</b> ${user.phonenumber}</p>
+               <p><b>Address :</b> ${user.address}</p>`;
+               userdiv.appendChild(newdiv);
+        });
+      }
+
+      
+      let registerbtn = document.querySelector("#reg");
+      registerbtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        RegisteredUsers(a);
+      });
+
+      function getOneUser() {
+        let searchName = document.querySelector("#srcname").value.trim().toLowerCase();
+        let oneuser = document.querySelector("#getoneuser");
+        let deleteuser = document.querySelector("#deleteoneuser");
+        let userdiv = document.querySelector("#user-list");
+
+        userdiv.innerHTML = "";
+        oneuser.innerHTML = "";
+        deleteuser.innerHTML = "";
+
+        // another method to find the values in the array we use the find
+        let foundUser=a.find(user=> user.name.toLowerCase() === searchName);
+
+        if(foundUser){
+        //   oneuser.innerText=`User Was Found ${searchName}`;
+        console.log("User Successfully fetched")
+        oneuser.innerHTML=`
+        <p><b>Name:</b> ${foundUser.name}<p>
+        <p><b>Email:</b> ${foundUser.email}<p>
+        <p><b>Phone number:</b> ${foundUser.phonenumber}<p>
+        <p><b>Address:</b> ${foundUser.address}<p>`
+        }
+        else{
+          oneuser.innerText=`User Was Not Found ${searchName}`;
+        }
+
+        // for (let val of a) {
+        //   if (val.name == searchName) {
+        //     oneuser.textContent = `Search Name Was Found ${searchName}`;
+        //     return;
+        //   }
+        // }
+        // oneuser.textContent = `Search Name Was Not Found ${searchName}`;
+      }
+
+      get.addEventListener("click", (e) => {
+        e.preventDefault();
+        getOneUser();
+      });
+
+      function deleteOneUser() {
+        let deleteduser = document.querySelector("#srcname").value;
+        let divtagmessage = document.querySelector("#deleteoneuser");
+          let userdiv = document.querySelector("#user-list");
+        document.querySelector("#getoneuser").innerHTML = "";
+         userdiv.innerHTML="";
+         divtagmessage.innerHTML="";
+        let flag = false;
+        for (let i = 0; i < a.length; i++) {
+          if (a[i].name === deleteduser) {
+            a.splice(i, 1);
+            divtagmessage.innerText = `UserName Was Sucessfully Deleted ${deleteduser}`;
+            flag = true;
+            break;
+          }
+        }
+
+        if (!flag) {
+          divtagmessage.innerText = `UserName Not Found ${deleteduser}`;
+        }
+
+        //  const originallength=a.length;
+        //  updatedUser=a.filter( user => user.name !== deleteduser);
+        //   console.log(updatedUser);
+        //   a.length = 0;
+        //  a.push(...updatedUser);
+
+        //   const modifiedlength=a.length;
+        //   if(updatedUser.length<originallength){
+        //       divtagmessage.textContent =`Entered Username Was Successfully Deleted ${deleteduser}`;
+        //   }
+        //   else{
+        //        divtagmessage.textContent =`Entered Username Was not Found ${deleteduser}`;
+        //   }
+      }
+
+      del.addEventListener("click", (e) => {
+        e.preventDefault();
+        deleteOneUser();
+      });
+    </script>
+  </body>
+</html>
