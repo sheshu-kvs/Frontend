@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Task..</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            overflow-x: hidden;
+        }
+
+        header {
+
+            display: flex;
+            /* flex-wrap: wrap; */
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            height: 20px;
+            padding: 40px;
+            background-image: url(Images/heading-bg.jpg);
+            background-repeat: no-repeat;
+            border-bottom: 1px black solid;
+        }
+
+        .headingimg {
+            flex: auto;
+
+        }
+
+        /* this will move img tag to the starting of the webpage */
+        .headingContent {
+            cursor: pointer;
+            /* flex: auto;  */
+        }
+
+        .mainContainer {
+            background-image: url(Images/banner-bg.jpg);
+            color: white;
+            /* width: 100vw; */
+            /* max-width: 1200px; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            justify-items: center;
+            min-height: 60vh;
+
+        }
+
+        .inpContainer {
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 10px;
+            align-items: center;
+            text-align: center;
+            flex-grow: 0;
+            flex-shrink: 1=0;
+            flex-basis: auto;
+
+        }
+
+        #inptag {
+            border: none;
+            outline: none;
+            border-color: black;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+
+        .iconsContainer {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            gap: 45px;
+        }
+
+        #iconimg {
+            background-color: white;
+            border-radius: 20px;
+            padding: 5px;
+        }
+
+        /* Main Container 2 */
+        .mainContainer2 {
+            margin-top: 40px;
+            display: flex; 
+            align-content: center;
+            justify-content: center;
+            padding: 45px;
+        }
+
+        .houseContainer {
+            /* min-width: 500px; */
+           padding: 45px;
+            margin-top: 40px;
+            padding: 15px;
+            display: grid;
+            gap: 20px;
+            background-color:dimgray;
+            grid-template-columns: 26% 33% 33%;
+            grid-template-rows: auto;
+            border-radius: 10px;
+
+
+        }
+        .parentfirstgrid{
+            display: flex;
+        }
+        .firstgrid{
+            display: grid;
+            grid-template-rows: repeat(5,auto);
+            grid-column: 1;
+            
+        }
+        .secondgrid{
+            grid-column: 2;
+        }
+        .thirdgrid{
+            grid-column: 3;
+          
+        }
+        .secondgrid{
+            padding: 30px;
+        }
+        #houseimg{
+              height: 400px;
+              border-radius: 20px;
+        }
+
+        .mainContainer3{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+        }
+        .foodsection{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin-top: 5px;
+        }
+        
+         .infromation{
+            width: 950px;
+             background-color:beige;
+             padding: 50px;
+            /* padding: 60px;  */
+          
+         }
+
+       
+       
+        
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="headingimg"> <img src="Images/white-logo.png" alt="Something Went Wrong" height="40px"
+                width="120px"></div>
+        <div class="headingContent">Home</div>
+        <div class="headingContent">Category</div>
+        <div class="headingContent">Listing</div>
+        <div class="headingContent">Contact Us</div>
+        <div class="headingContent"></div>
+    </header>
+
+    <div class="mainContainer">
+        <p>OVER 36500+ Active Listings</p>
+        <h2>Find Near By Places And Things</h2>
+        <div class="inpContainer">
+            <input type="text" value="All Areas" id="inptag" readonly>
+            <input type="text" value="Enter a Location" id="inptag" readonly>
+            <input type="text" value="Price Range" name="" id="inptag" readonly>
+            <!-- <i class="fa-regular fa-magnifying-glass"></i> -->
+            <img src="Images/magnifying-glass-solid-full.svg" alt="Something Went Wrong" height="20px" width="100px"
+                style="">
+        </div>
+        <div class="iconsContainer">
+            <div class="imgitmes">
+                <img src="Images/search-icon-01.png" alt="Something Went Wrong" id="iconimg">
+                <p>Apartemnets</p>
+            </div>
+            <div class="imgitmes">
+                <img src="Images/search-icon-02.png" alt="Something Went Wrong" id="iconimg">
+                <p>Food & Life</p>
+            </div>
+            <div class="imgitmes">
+                <img src="Images/search-icon-03.png" alt="" id="iconimg">
+                <p>Cars</p>
+            </div>
+            <div class="imgitmes">
+                <img src="Images/search-icon-04.png" alt="" id="iconimg">
+                <p>Shopping</p>
+            </div>
+            <div class="imgitmes">
+                <img src="Images/search-icon-05.png" alt="" id="iconimg">
+                <p>Travelling</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainContainer2">
+        <!-- <h2>Popular Categories</h2> 
+        <p>Check This Items</p>  -->
+
+        <div class="houseContainer">
+           <div class="parentfirstgrid">
+             <div class="firstgrid">
+                <div class="imgitmesgrid">
+                    <img src="Images/search-icon-01.png" alt="Something Went Wrong" id="iconimg">
+                    <p>Apartemnets</p>
+                </div>
+                <div class="imgitmesgrid">
+                    <img src="Images/search-icon-02.png" alt="Something Went Wrong" id="iconimg">
+                    <p>Food & Life</p>
+                </div>
+                <div class="imgitmesgrid">
+                    <img src="Images/search-icon-03.png" alt="" id="iconimg">
+                    <p>Cars</p>
+                </div>
+                <div class="imgitmesgrid">
+                    <img src="Images/search-icon-04.png" alt="" id="iconimg">
+                    <p>Shopping</p>
+                </div>
+                <div class="imgitmesgrid">
+                    <img src="Images/search-icon-05.png" alt="" id="iconimg">
+                    <p>Travelling</p>
+                </div>
+
+            </div>
+           </div>
+            <div class="secondgrid">
+                <h2>One Of The Most Trending Stuff Right Nows</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not 
+                    only five centuries, but also the leap into electronic typesetting,
+                     remaining essentially unchanged. It was popularised in the 1960s with
+                      the release of Letraset sheets containing Lorem Ipsum passages,
+                       and more recently with desktop publishing software like Aldus PageMaker
+                        including versions of Lorem Ipsum.</p>
+                <button>Discover More</button>
+            </div>
+            <div class="thirdgrid">
+                <img src="Images/tabs-image-01.jpg" alt=""  id="houseimg">
+            </div>
+        </div>
+    </div>
+
+   <div class="mainContainer3">
+    <h2>Recent Listing</h2>
+     </div>
+     <div class="foodsection">
+        <div class="imagediv">
+          <img src="Images/listing-04.jpg" alt="" height="200px" width="300px">
+        </div>
+        <div class="infromation">
+            <p>The Crimson Manor</p>
+            <p>$550 </p>
+        </div>
+      </div>
+       <div class="foodsection">
+        <div class="imagediv">
+          <img src="Images/listing-05.jpg" alt="" height="200px" width="300px">
+        </div>
+        <div class="infromation">
+            <p>The Crimson Manor</p>
+            <p>$550 </p>
+        </div>
+      </div>
+       <div class="foodsection">
+        <div class="imagediv">
+          <img src="Images/listing-06.jpg" alt="" height="200px" width="300px">
+        </div>
+        <div class="infromation">
+            <p>The Crimson Manor</p>
+            <p>$550 </p>
+        </div>
+      </div>
+
+
+      <footer>
+        <div class="firstfooter">
+            <img src="Images/black-logo.png" alt="">
+            <p> Lorem Ipsum has been the industry's standard dummy text ever
+                 since the 1500s, when an unknown printer took a galley
+                 of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div class="secondfooter">
+
+        </div>
+        <div class="thirdfooter"></div>
+      </footer>
+      
+
+
+
+</body>
+
+</html>
+
+
+
+<!--    <div class="imagediv">
+            <img src="Images/listing-05.jpg" alt="">
+            <div class="infromation">
+            <p> Oasis Dunes Resort</p>
+            <p>$$250 </p>
+            </div>
+        </div>
+        <div class="infromation">
+            <p>The Crimson Manor</p>
+            <p>$550 </p>
+        </div>
+        <div class="imagediv">
+            <img src="Images/listing-05.jpg" alt="">
+            <div class="infromation">
+            <p> The Northern Lights Pod</p>
+            <p>$800</p>
+            </div>
+        </div> --> 
