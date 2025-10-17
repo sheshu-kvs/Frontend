@@ -13,6 +13,7 @@
         }
         body{
             overflow-x: hidden;
+            font-family: cursive;
         }
 
         header {
@@ -28,6 +29,15 @@
             background-image: url(Images/heading-bg.jpg);
             background-repeat: no-repeat;
             border-bottom: 1px black solid;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+       
+        
+        .headingContent:hover{
+            color: darkgray;
         }
 
         .headingimg {
@@ -52,52 +62,108 @@
             align-content: center;
             align-items: center;
             justify-items: center;
-            min-height: 60vh;
+            min-height: 90vh;
 
         }
+
+        /* .imgitmes:hover{
+            color:  darkgray;
+
+        } */
+
+      
+
 
         .inpContainer {
             margin-top: 20px;
             background-color: white;
-            border-radius: 10px;
+            border-radius: 5px;
+            padding: 5px;
+            width: 70%;
             align-items: center;
             text-align: center;
             flex-grow: 0;
-            flex-shrink: 1=0;
+            flex-shrink: 1;
             flex-basis: auto;
 
+
+        }
+        .inpContainer > img{
+            /* background-color:darkgray ; */
+            /* width: 26%; */
+            /* height: 35px; */
+
         }
 
-        #inptag {
+          select,#firstSelect,#inp{
+            cursor: pointer;
+            width: 20%;
             border: none;
             outline: none;
-            border-color: black;
-            padding: 10px;
-            border-radius: 10px;
+        } 
+         #firstSelect ,#secondSelect,#inp{
+            border-right: 2px solid darkgray ;
+         }
+         #imgtag{
+            /* background-color: darkgray ; */
+         }
+         label,select{
+            font-size: 15px;
+            margin: 5px;
+         }
+        
 
-        }
+
+
 
         .iconsContainer {
             margin-top: 30px;
             display: flex;
-            align-items: center;
-            justify-items: center;
-            gap: 45px;
+            align-content: center;
+            justify-content: center;
+            gap: 120px;
         }
+        .imgitmes{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        
+        }
+        
 
-        #iconimg {
-            background-color: white;
-            border-radius: 20px;
-            padding: 5px;
+       .imgiconformain,.imgiconformain12{
+          background-color: aliceblue;
+          height: 45px;
+          width: 42px;
+          padding: 5px;
+          border-radius: 22px;
+       }
+       .imgiconformain12{
+        height: 45px;
+        width: 42px;
+        display: block;
+        object-fit: contain;
+        
+       }
+
+        .imgiconformain:hover,
+        .imgiconformain12:hover{
+            background-color: darkgray;
         }
 
         /* Main Container 2 */
         .mainContainer2 {
             margin-top: 40px;
-            display: flex; 
+            padding: 45px;
+           
+        }
+        .labelContainer{
+            display: flex;
+           
             align-content: center;
             justify-content: center;
-            padding: 45px;
+
         }
 
         .houseContainer {
@@ -114,34 +180,83 @@
 
 
         }
-        .parentfirstgrid{
+        .imgitmesgrid{
             display: flex;
+            align-items: center;
+            padding: 20px;
+            gap: 40px;
+        }
+        .imgitmesgrid:hover{
+          background-color: darkgray;
+        border-radius: 10px;
+        }
+        
+        
+        .parentfirstgrid{
+            display: grid;
+            gap: 20px;
         }
         .firstgrid{
             display: grid;
+            gap: 20px;
             grid-template-rows: repeat(5,auto);
             grid-column: 1;
+            color: white;
+            text-align: center;
+            align-items: center;
+        }
+        #iconimg{
+        background-color: aliceblue;
+          height: 45px;
+          width: 42px;
+          padding: 5px;
+          border-radius: 22px;
             
+        }
+        .imgitemsgrid{
+            
+           
         }
         .secondgrid{
             grid-column: 2;
+             align-self: center;
+             color: white;
         }
         .thirdgrid{
             grid-column: 3;
+            place-self: center;
           
         }
-        .secondgrid{
-            padding: 30px;
+        .secondgrid > p{
+            margin-top: 25px;
+            
+        }
+        .secondgrid > button{
+            padding: 18px;
+            width: 400px;
+            margin-top: 25px;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+        .secondgrid > button:hover{
+          background-color: darkgray;
+
         }
         #houseimg{
+            /* padding: 20px; */
               height: 400px;
               border-radius: 20px;
+              /* top: 40px; */
+        }
+        .mainContainer3{
+            margin-bottom: 40px;
         }
 
         .mainContainer3{
             display: flex;
             justify-content: center;
             align-content: center;
+            margin-top: 20px;
 
         }
         .foodsection{
@@ -155,67 +270,120 @@
             width: 950px;
              background-color:beige;
              padding: 50px;
-            /* padding: 60px;  */
-          
          }
+         footer{
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+            /* align-content: space-around; */
+         }
+         .secondfooter{
+            /* display: flex;
+            gap: 35px; */
+           
+         }
+         .parentdivforsecondFooter{
+            display: flex;
+            gap: 30px;
+         }
+       .insideseconddiv1{
+        gap: 9px;
+       }
 
-       
-       
-        
+       html{
+        scroll-behavior: smooth;
+       }
+       section{
+        /* height: 100vh; */
+       }
 
+
+        a{
+        color: white;
+        text-decoration: none;
+       }
+       a:hover{
+        color: darkgray;
+       }
     </style>
+        <script src="https://kit.fontawesome.com/2ad293ac98.js" crossorigin="anonymous"></script>
 
 </head>
-
 <body>
     <header>
         <div class="headingimg"> <img src="Images/white-logo.png" alt="Something Went Wrong" height="40px"
                 width="120px"></div>
-        <div class="headingContent">Home</div>
-        <div class="headingContent">Category</div>
-        <div class="headingContent">Listing</div>
-        <div class="headingContent">Contact Us</div>
-        <div class="headingContent"></div>
+        <div class="headingContent"><a href="#Home">Home</a></div>
+        <div class="headingContent"><a href="#Category">Category</a></div>
+        <div class="headingContent"><a href="#Listing">Listing</a></div>
+        <div class="headingContent"><a href="#footer">Contact Us</a></div>
+        <!-- <div class="headingContent"></div> -->
     </header>
-
-    <div class="mainContainer">
+    <section id="Home">
+         <div class="mainContainer">
         <p>OVER 36500+ Active Listings</p>
         <h2>Find Near By Places And Things</h2>
         <div class="inpContainer">
-            <input type="text" value="All Areas" id="inptag" readonly>
-            <input type="text" value="Enter a Location" id="inptag" readonly>
-            <input type="text" value="Price Range" name="" id="inptag" readonly>
+          
+            <!-- <input type="text" value="All Areas" id="inptag" readonly> -->
+             <label for="firstSelect">AREA</label>
+             <select name="All Areas" id="firstSelect">
+                <option value="">Area 1</option>
+                <option value="">Area 2</option>
+                <option value="">Area 3</option>
+             </select>
+            <!-- <input type="text" value="Enter a Location" id="inptag" readonly> -->
+             <input type="text" name="Enter a Name" placeholder="Enter a Location" id="inp">
+             <label for="price-select">Price Range</label>
+             <select name="Price Range" id="price-select">
+                <option value="1000">1000</option>
+                <option value="2000">2000</option>
+                <option value="3000">3000</option>
+                <option value="4000">4000</option>
+             </select>
+            <!-- <input type="text" value="Price Range" name="" id="inptag" readonly> -->
             <!-- <i class="fa-regular fa-magnifying-glass"></i> -->
-            <img src="Images/magnifying-glass-solid-full.svg" alt="Something Went Wrong" height="20px" width="100px"
+             <!-- <div class="searchdiv"> -->
+                 <img src="Images/magnifying-glass-solid-full.svg" alt="Something Went Wrong" id="imgtag" height="20px" width="100px"
                 style="">
+                <!-- <p>Search</p> -->
+             <!-- </div> -->
+           
         </div>
         <div class="iconsContainer">
             <div class="imgitmes">
-                <img src="Images/search-icon-01.png" alt="Something Went Wrong" id="iconimg">
+                <img src="Images/search-icon-01.png" alt="Something Went Wrong" id="iconimg" class="imgiconformain">
                 <p>Apartemnets</p>
             </div>
             <div class="imgitmes">
-                <img src="Images/search-icon-02.png" alt="Something Went Wrong" id="iconimg">
+                <img src="Images/search-icon-02.png" alt="Something Went Wrong" id="iconimg" class="imgiconformain">
                 <p>Food & Life</p>
             </div>
             <div class="imgitmes">
-                <img src="Images/search-icon-03.png" alt="" id="iconimg">
+                <img src="Images/search-icon-03.png" alt="" id="iconimg" class="imgiconformain12">
                 <p>Cars</p>
             </div>
             <div class="imgitmes">
-                <img src="Images/search-icon-04.png" alt="" id="iconimg">
+                <img src="Images/search-icon-04.png" alt="" id="iconimg" class="imgiconformain">
                 <p>Shopping</p>
             </div>
             <div class="imgitmes">
-                <img src="Images/search-icon-05.png" alt="" id="iconimg">
+                <img src="Images/search-icon-05.png" alt="" id="iconimg" class="imgiconformain">
                 <p>Travelling</p>
             </div>
         </div>
     </div>
 
-    <div class="mainContainer2">
-        <!-- <h2>Popular Categories</h2> 
-        <p>Check This Items</p>  -->
+    </section>
+   
+
+
+    <section id="Category">
+         <div class="mainContainer2">
+     <div class="labelContainer"> 
+            <h2>Popular Categories</h2> <br>
+     </div>
+   
 
         <div class="houseContainer">
            <div class="parentfirstgrid">
@@ -225,11 +393,12 @@
                     <p>Apartemnets</p>
                 </div>
                 <div class="imgitmesgrid">
-                    <img src="Images/search-icon-02.png" alt="Something Went Wrong" id="iconimg">
+                    <img src="Images/search-icon-02.png" alt="Something Went Wrong" id="iconimg" >
                     <p>Food & Life</p>
                 </div>
-                <div class="imgitmesgrid">
+                <div class="imgitmesgrid" >
                     <img src="Images/search-icon-03.png" alt="" id="iconimg">
+                     <!-- <i class="fa-thin fa-car"></i> -->
                     <p>Cars</p>
                 </div>
                 <div class="imgitmesgrid">
@@ -247,10 +416,7 @@
                 <h2>One Of The Most Trending Stuff Right Nows</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not 
                     only five centuries, but also the leap into electronic typesetting,
-                     remaining essentially unchanged. It was popularised in the 1960s with
-                      the release of Letraset sheets containing Lorem Ipsum passages,
-                       and more recently with desktop publishing software like Aldus PageMaker
-                        including versions of Lorem Ipsum.</p>
+                     remaining essentially unchanged Lorem Ipsum.</p>
                 <button>Discover More</button>
             </div>
             <div class="thirdgrid">
@@ -258,8 +424,14 @@
             </div>
         </div>
     </div>
+        
 
-   <div class="mainContainer3">
+    </section>
+    
+    
+
+    <section id="Listing">
+         <div class="mainContainer3">
     <h2>Recent Listing</h2>
      </div>
      <div class="foodsection">
@@ -289,20 +461,111 @@
             <p>$550 </p>
         </div>
       </div>
+    </section>
+   <!-- <div class="mainContainer3">
+    <h2>Recent Listing</h2>
+     </div>
+     <div class="foodsection">
+        <div class="imagediv">
+          <img src="Images/listing-04.jpg" alt="" height="200px" width="300px">
+        </div>
+        <div class="infromation">
+            <p>The Crimson Manor</p>
+            <p>$550 </p>
+        </div>
+      </div>
+       <div class="foodsection">
+        <div class="imagediv">
+          <img src="Images/listing-05.jpg" alt="" height="200px" width="300px">
+        </div>
+        <div class="infromation">
+            <p>The Crimson Manor</p>
+            <p>$550 </p>
+        </div>
+      </div>
+       <div class="foodsection">
+        <div class="imagediv">
+          <img src="Images/listing-06.jpg" alt="" height="200px" width="300px">
+        </div>
+        <div class="infromation">
+            <p>The Crimson Manor</p>
+            <p>$550 </p>
+        </div>
+      </div> -->
 
 
-      <footer>
+
+      <section id="footer">
+         <footer>
         <div class="firstfooter">
-            <img src="Images/black-logo.png" alt="">
-            <p> Lorem Ipsum has been the industry's standard dummy text ever
-                 since the 1500s, when an unknown printer took a galley
+            <img src="Images/black-logo.png" alt="" height="30px">
+            <p> Lorem Ipsum has been the industry's standard dummy text ever<br>
                  of type and scrambled it to make a type specimen book.</p>
         </div>
+        <!-- <div><h3>HelpFull Links</h3></div> -->
         <div class="secondfooter">
+            <!-- <div><h3>HelpFull Links</h3></div> -->
+              <!-- <h3>HelpFull Links</h3> -->
 
+                <div class="parentdivforsecondFooter">
+                                   <!-- <p>HelpFull links</p> -->
+                    <div   class="insideseconddiv1">
+                    <p>HelpFull links</p>
+                    <ul>Categories</ul>
+                    <ul>Reviews</ul>
+                    <ul>Listing</ul>
+                    <ul>Contact Us</ul>
+                </div>
+                <div style="margin-top: 20px;"  class="insideseconddiv2">
+                    <ul>About Us</ul>
+                    <ul>Rewards</ul>
+                    <ul>Useful Sites</ul>
+                    <ul>Privacy Policy</ul>
+                </div>
+                </div>
         </div>
-        <div class="thirdfooter"></div>
+        <div class="thirdfooter">
+            <label>Contact US</label>
+            <p style="margin-top: 10px;">Seeta Circle <br>
+                HoskereHalli</p>
+            <p>999-888-777-0</p>
+            <p>444-555-333-0</p>
+        </div>
       </footer>
+      </section>
+       <!-- <footer>
+        <div class="firstfooter">
+            <img src="Images/black-logo.png" alt="" height="30px">
+            <p> Lorem Ipsum has been the industry's standard dummy text ever<br>
+                 of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <!-- <div><h3>HelpFull Links</h3></div> -->
+        <!-- <div class="secondfooter">
+
+                <div class="parentdivforsecondFooter">
+                    <div   class="insideseconddiv1">
+                    <p>HelpFull links</p>
+                    <ul>Categories</ul>
+                    <ul>Reviews</ul>
+                    <ul>Listing</ul>
+                    <ul>Contact Us</ul>
+                </div>
+                <div style="margin-top: 20px;"  class="insideseconddiv2">
+                    <ul>About Us</ul>
+                    <ul>Rewards</ul>
+                    <ul>Useful Sites</ul>
+                    <ul>Privacy Policy</ul>
+                </div>
+                </div>
+        </div>
+        <div class="thirdfooter">
+            <label>Contact US</label>
+            <p style="margin-top: 10px;">Seeta Circle <br>
+                HoskereHalli</p>
+            <p>999-888-777-0</p>
+            <p>444-555-333-0</p>
+        </div>
+      </footer>  --> 
       
 
 
