@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        
+console.log("first-class function");
+// Rules:
+//  Function Store them as the variable 
+// pass them as the Argument
+// we can return the function
+
+
+// first rule :
+// An function store them  as the variable
+        let a=function (){
+              console.log("Hello")
+        }
+  
+    //  a()
+
+    //  Second Rule pass them as the argument
+
+    function greet(fun){
+        fun();
+    }
+
+
+    greet(a);
+
+
+    // third rule 
+    // return them as the function
+
+
+    function outer(){
+        return function inner(){
+            console.log("inner function");
+        }
+    }
+
+
+    let res=outer();
+    res();
+
+
+    </script>
+    
+</body>
+</html>
