@@ -12,7 +12,10 @@
             box-sizing: border-box;
         }
         body{
-            overflow-x: hidden;
+            /* changed */
+            /* width: 88vw;/ */
+            height: 100vh;
+            /* overflow-x: hidden; */
             font-family: cursive;
         }
 
@@ -30,7 +33,7 @@
             background-repeat: no-repeat;
             border-bottom: 1px black solid;
             position: fixed;
-            width: 100%;
+            width: 100vw;
             top: 0;
         }
 
@@ -52,10 +55,9 @@
         }
 
         .mainContainer {
+            width: 100vw;
             background-image: url(Images/banner-bg.jpg);
             color: white;
-            /* width: 100vw; */
-            /* max-width: 1200px; */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -66,32 +68,26 @@
 
         }
 
-        /* .imgitmes:hover{
-            color:  darkgray;
-
-        } */
+        
 
       
 
 
         .inpContainer {
+            width: 80vw;
             margin-top: 20px;
             background-color: white;
             border-radius: 5px;
             padding: 5px;
-            width: 70%;
             align-items: center;
             text-align: center;
             flex-grow: 0;
             flex-shrink: 1;
             flex-basis: auto;
 
-
         }
         .inpContainer > img{
-            /* background-color:darkgray ; */
-            /* width: 26%; */
-            /* height: 35px; */
+       
 
         }
 
@@ -278,8 +274,7 @@
             /* align-content: space-around; */
          }
          .secondfooter{
-            /* display: flex;
-            gap: 35px; */
+         
            
          }
          .parentdivforsecondFooter{
@@ -294,7 +289,6 @@
         scroll-behavior: smooth;
        }
        section{
-        /* height: 100vh; */
        }
 
 
@@ -576,21 +570,3 @@
 
 
 
-<!--    <div class="imagediv">
-            <img src="Images/listing-05.jpg" alt="">
-            <div class="infromation">
-            <p> Oasis Dunes Resort</p>
-            <p>$$250 </p>
-            </div>
-        </div>
-        <div class="infromation">
-            <p>The Crimson Manor</p>
-            <p>$550 </p>
-        </div>
-        <div class="imagediv">
-            <img src="Images/listing-05.jpg" alt="">
-            <div class="infromation">
-            <p> The Northern Lights Pod</p>
-            <p>$800</p>
-            </div>
-        </div> --> 
