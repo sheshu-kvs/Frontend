@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .main{
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+        .nav{
+            height: 100px;
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5vw;
+            border-bottom: 2px solid #fad2d2;
+        }
+        .nav h2{
+            font-size: 2vw;
+            
+        }
+       
+    
+        .headingContent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6vw;
+        }
+        .headingContent i{
+            display: none;
+        }
+        .headingContent button{
+            padding: 0.5vw 2vw;
+            border: 2px solid black;
+            background-color: #fad2d2;
+            border-radius: 10px;
+        }
+        .content{
+            background-color: #fad2d2;
+            height: calc(100% - 100px);
+            width:100%;
+            display: flex;
+        
+        }
+        .left{
+            width: 50%;
+            height: 100%;
+            padding: 4vw 5vw;
+        }
+        .left h2{
+            font-size:4vw;
+            line-height: 4vw;
+        }
+        .left span{
+            color: #1B3D9E;
+            
+        }
+        .left p{
+            margin-top: 2vw;
+            font: 400;
+            font-size: 2vw;
+            /* line-height: 4.4vw; */
+        } 
+        .left button{
+            margin-top:4vw;
+            padding: 2vw 8vw;
+            border-radius: 6vw;
+        }
+        .right{
+             width: 50%;
+             height: 100%;
+            background-color:#68A9FD;
+        }
+        .right img{
+            height: 100%;
+            width: 100%;
+        }
+
+
+        @media (max-width:600px) {
+            /*  */
+             .nav{
+                /* background-color: greenyellow; */
+                height: 60px;
+                color: black;
+                padding:  0 11vw;
+             }
+             .nav h2{
+                font-size: 8vw;
+             }
+             .headingContent h4{
+                display: none;
+             }
+             .headingContent i{
+                display: block;
+                font-size: 6vw;
+                
+             }
+             .headingContent button{
+                display: none;
+             } 
+             .content{
+                height: calc(100% - 60px);
+                flex-direction: column;
+
+             }
+             .left{
+                width: 100%;
+                height: 55%;
+
+             }
+             .left h2{
+                /* margin-bottom: 0.5vw; */
+                padding: 0vw 4vw;
+                font-size:9vw ;
+                line-height: 10vw;
+                /* margin-bottom: 2 vw; */
+                
+             }
+             .left p{
+                margin-top: 2vw;
+                padding: 0vw 4vw;
+                font-size: 6vw;
+                line-height: 8vw;
+                width: 100%;
+                margin-bottom: 4vw;
+               
+             }
+             .left button { 
+                margin-top: 1vw;
+                margin-bottom: 1vw;
+                padding: 4vw 8vw;
+                margin-left: 4vw;
+                font-size: 6vw;
+
+             }
+
+             .right{
+                width: 100%;
+                height: 50%;
+             }
+
+        }
+        
+    </style>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <div class="main">
+       <div class="nav">
+        <h2>Logo</h2>
+        <div class="headingContent">
+            <h4>Home</h4>
+            <h4>About</h4>
+            <h4>Contact</h4>
+            <h4>Enquire</h4>
+             <button>SignIn</button>
+            <i class="ri-menu-line"></i>
+        </div>
+       </div>
+       <div class="content">
+        <div class="left">
+            <h2>Learn The Coding <span>Coolest</span> Platform in the India.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  similique atque dignissimos culpa beatae mollitia 
+                nisi soluta aspernatur commodi quam  ullam impedit.</p>
+                  <button>Submit</button>
+        
+            </div>
+      
+        <div class="right">
+            <img src="DeveloperImage.jpg" alt="">
+        </div>
+       </div>
+    </div>
+    
+</body>
+</html>
