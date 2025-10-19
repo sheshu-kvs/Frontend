@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Units</title>
+    <style>
+
+
+html{
+    font-size: 6px;
+}
+
+        .mainContainer{
+            border: 2px solid black ;
+            background-color: aqua;
+            margin: 26px auto;
+            width: 80vw;
+
+            font-size: 12px;
+
+            /* px is the single unit for the different devices differnet size .
+            we make our page responsive so we can use the  viewport
+            what happen means it will be same for the all the screens..
+
+             em: are used to the 
+             it will inherit from the parent in the parent what the 
+             fontsized declared it can be the double in the child..
+
+
+             rem is take from the root element of the html it the thml element declared in 6px 
+             where we declared child elements with 2rem total fontsize would be the 12px
+              */
+        }
+        .mycon{
+            border: 2px solid black ;
+            background-color: aqua;
+            width: 80vw;
+            margin: 26px auto;
+
+        }
+        .mainContainer p{
+            font-size: 2rem;
+        }
+
+
+    
+    </style>
+</head>
+<body>
+
+<div class="mainContainer">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos nulla, perferendis 
+    doloremque dolore voluptatem quis qui reprehenderit modi</p> ab praesentium, commodi veritatis numquam 
+    culpa adipisci similique aperiam quaerat? Deleniti, aliquam?
+</div>
+<div class="mycon">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati illo architecto praesentium voluptatum, saepe rerum iure repudiandae, hic molestiae 
+    voluptatibus ratione autem distinctio sapiente ipsum porro reiciendis. Distinctio, quibusdam.
+</div>
+
+</body>
+</html>

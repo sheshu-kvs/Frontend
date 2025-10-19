@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Units In CSS...</title>
+    <style>
+        /*  here the px means the pixel it should be the fixed on the screen..
+        
+        Example---
+        .parent{
+            background-color: red;
+            border: 2px solid black;
+            height: 400px;
+            width: 400px;
+
+        }
+        .inner{
+            background-color: aqua;
+            border: 2px solid black;
+            height: 200px;
+            width: 200px;
+        }*/
+
+
+        /* 
+        --% an percentange is dependent on the parent
+        html,body{
+    height: 100%;
+}
+        .parent{
+            background-color: red;
+            border: 2px solid black;
+            height: 50%;
+            width: 50%;
+
+        }
+        .inner{
+            background-color: aqua;
+            border: 2px solid black;
+            height:100%;
+            width: 30%;
+        } */
+        
+
+
+        
+
+
+
+
+        /* vw  it view port it is fixed height according to the screen*/
+        /* vh  it view port it is fixed width according to the screen */
+
+
+
+        /*  */
+        /* | Unit   | Scales With  | Best For                 | Example                   |
+           | ------ | ------------ | ------------------------ | ------------------------- |
+           | `vw`   | Width        | Horizontal scaling       | responsive width, text    |
+           | `vh`   | Height       | Vertical scaling         | full-page height sections |
+           | `vmin` | Smaller side | Fit small screens nicely | hero text, logos          |
+           | `vmax` | Larger side  | Keep visuals big         | backgrounds, bold titles  |
+ */
+
+
+        .inner{
+           font-size: 7vmax;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="inner">
+            This is the Child Div...
+        </div>
+    </div>
+    
+</body>
+</html>
