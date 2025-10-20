@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mainContainer {
+            height: 100%;
+            width: 100%;
+        }
+
+        .nav {
+            background-image: url(Images/heading-bg.jpg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2vw 5vw;
+        }
+
+        .nav img {
+            height: 50%;
+            width: 120px;
+            padding: 0vw 4w;
+
+        }
+
+        .navpart2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            color: white;
+        }
+
+        .navpart2 button {
+            border-radius: 4px solid black;
+            padding: 1vw 2vw;
+        }
+
+        .navpart2 i {
+            display: none;
+        }
+
+        /* Main 1  */
+        .main1 {
+            background-image: url(Images/banner-bg.jpg);
+            height: 35vw;
+            background-repeat: no-repeat;
+            color: white;
+            text-align: center;
+            align-items: center;
+            padding: 9vw 8vw;
+        }
+
+        .main1 p {
+            margin-bottom: 2vw;
+        }
+
+        .inpContainer {
+            margin-top: 2vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: white;
+            /* width: 60vw; */
+            padding: 1vw 3vw;
+        }
+
+        .inpContainer select {
+            border: none;
+            outline: none;
+            border-right: 2px solid black;
+        }
+
+        .inpContainer input {
+            border: none;
+            outline: none;
+            border-right: 2px solid black;
+        }
+
+        .inpContainer .inp4 {}
+
+        .iconConatiner {
+            margin-top: 2vw;
+            display: flex;
+            padding: 2vw 8vw;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .imgItems {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+
+        }
+
+        .iconConatiner img {
+            background-color: white;
+            border-radius: 60px;
+            padding: 1vw 1vw;
+        }
+
+        #carimg {
+            object-fit: center;
+            padding: 1vw 1vw;
+        }
+
+        /* Main 2 */
+
+        .main2 {
+            background-image: url(Images/white-logo.png);
+            background-repeat: no-repeat;
+            padding: 4vw 6vw;
+            text-align: center;
+            align-items: center;
+        }
+
+
+        .gridColumn {
+            background-color: darkgray;
+            border-radius: 1vw;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1fr;
+            align-items: center;
+
+        }
+
+        .firstColumn {
+            display: grid;
+            grid-template-rows: repeat(5, auto);
+            padding: 2vw 3vw;
+        }
+
+        .iconConatinergrid {}
+
+        .imgItemsgrid {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            margin-bottom: 40px;
+            gap: 10px;
+        }
+
+        .imgItemsgrid img {
+            background-color: white;
+            border-radius: 60px;
+            padding: 1vw 1vw;
+
+        }
+
+        .imgItemsgrid p {}
+
+
+        .secondColumn {
+            /* padding: 5vw; */
+            text-align: left;
+
+
+        }
+
+        .secondColumn p {
+            text-align: left;
+            margin-top: 0.5vw;
+            padding: 0vw 2vw;
+            font-size: 2.3vw;
+            line-height: 3vw;
+        }
+
+        .secondColumn button {
+            margin-top: 1vw;
+            padding: 1.2vw 12vw;
+        }
+
+        .thirdColumn {
+            padding: 2vw;
+        }
+
+        .thirdColumn img {
+            padding: 2vw 1vw;
+            height: 70vh;
+            width: 30vw;
+            border-radius: 3vw;
+
+        }
+
+
+        /* main3  */
+        .main3{
+            margin-top: 2vw;
+            padding: 4vw 6vw;
+            text-align: center;
+        }
+        .foodsection{
+            padding: 0.2vw;
+
+        }
+        .imagediv{
+            display: flex;
+            background-color: antiquewhite;
+             gap: 2vw;
+        }
+        .infromation{
+            padding: 6vw 8vw;
+        }
+      /* main4 */
+
+          .main4{
+             padding: 4vw 6vw;
+          }
+          footer{
+            display: flex;
+            justify-content: space-between;
+          }
+          footer img{
+            height: 45px;
+            margin-bottom: 1vw;
+          }
+          .parentdivforsecondFooter{
+            display: flex;
+          }
+          
+
+
+
+
+        @media (max-width:600px) {
+            .nav {
+                height: 60px;
+                background-color: aqua;
+                color: green;
+            }
+
+            .nav img {
+                height: 10vw;
+                /* font-size: 3vw; */
+                padding: 1vw 1vw;
+            }
+
+            .navpart2 p {
+                display: none;
+            }
+
+            .navpart2 button {
+                display: none;
+            }
+
+            .navpart2 i {
+                display: block;
+                padding: 4vw 5vw;
+                font-size: 5vw;
+            }
+
+            .main1 {
+                height: 50vh;
+            }
+
+            .main1 p {
+                font-size: 4vw;
+            }
+
+            .main1 h2 {
+                font-size: 4.5vw;
+            }
+
+            .iconConatiner {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8vw;
+
+            }
+
+            .imgItems {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .imgItems img {
+                width: 7vw;
+            }
+
+            .main2 {
+                margin-top: 1vh;
+                height: 60vh;
+                width: 100vw;
+                margin-bottom: 28vh;
+            }
+            .main2 h2{
+                font-size: 5vw;
+            }
+            .main2 p{
+                font-size: 4vw;
+                margin-bottom: 1vw;
+            }
+
+            .firstColumn p {
+                font-size: 3vw;
+                align-items: center;
+                justify-items: center;
+            }
+
+
+            .secondColumn h2 {
+                font-size: 4vw;
+                margin-bottom: 1vw;
+            }
+
+            .secondColumn p {
+                font-size: 3.5vw;
+                line-height: 3.7vw;
+                margin-bottom: 1vw;
+
+            }
+
+            .secondColumn button {
+                font-size: 2vw;
+                margin-bottom: 2vw;
+            }
+
+            .thirdColumn img {
+                height:55vh;
+                width: 23vw;
+            }
+            .main3{
+                height: calc(100% - 35vh);
+            }
+            .main3 h2{
+              font-size: 5vw;     
+            }
+             .main3 p{
+                font-size: 4vw;
+            }
+            .main4{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 50vw;
+                padding: 2vw 6vw;
+                gap: 4vw;
+            }
+            .firstfooter p{
+                font-size: 5vw;
+            }
+            .secondfooter p{
+                font-size: 4vw;
+            }
+            .parentdivforsecondFooter {
+                font-size: 4.5vw;
+            }
+            .thirdfooter{
+                font-size: 4.5vw;
+            }
+
+
+
+
+        }
+    </style>
+</head>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+
+<body>
+    <div class="mainContainer">
+        <div class="nav">
+            <img src="Images/white-logo.png" alt="">
+            <div class="navpart2">
+                <p>Home</p>
+                <p>Category</p>
+                <p>Listing</p>
+                <p>Contact Us</p>
+                <button>Add Your Listing</button>
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+        <div class="main1">
+            <p>Over 36500+ Active Listing</p>
+            <h2>Find Nearby Places & Things</h2>
+            <div class="inpContainer">
+                <div class="inp1">
+                    <select name="All Areas" id="">
+                        <option value="" id="optionInp">Area1</option>
+                        <option value="" id="optionInp">Area2</option>
+                        <option value="" id="optionInp">Area3</option>
+                        <option value="" id="optionInp">Area4</option>
+                    </select>
+                </div>
+                <div class="inp2">
+                    <input type="text" placeholder="Enter a location ">
+                </div>
+                <div class="inp3">
+                    <select name="Enter The Price" id="">
+                        <option value="">1000</option>
+                        <option value="">1000</option>
+                        <option value="">1000</option>
+                        <option value="">1000</option>
+                    </select>
+                </div>
+                <div class="inp4">
+                    <img src="Images/search icon.svg" width="40px" height="20px">
+                </div>
+            </div>
+            <div class="iconConatiner">
+                <div class="imgItems">
+                    <img src="Images/search-icon-01.png" alt=""><br>
+                    <p>Home</p>
+                </div>
+                <div class="imgItems">
+                    <img src="Images/search-icon-02.png" alt="">
+                    <p>Food & Life</p>
+                </div>
+                <div class="imgItems">
+                    <img src="Images/search-icon-03.png" alt="" id="carimg">
+                    <p>Cars</p>
+                </div>
+                <div class="imgItems">
+                    <img src="Images/search-icon-04.png" alt="">
+                    <p>Shopping</p>
+                </div>
+                <div class="imgItems">
+                    <img src="Images/search-icon-05.png" alt="">
+                    <p>Travelling</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="main2">
+            <div class="category">
+                <h2>Popular Categories</h2>
+                <p>Check This Items</p>
+                <div class="gridColumn">
+                    <div class="firstColumn">
+                        <div class="iconConatinergrid">
+                            <div class="imgItemsgrid">
+                                <img src="Images/search-icon-01.png" alt=""><br>
+                                <p>Home</p>
+                            </div>
+                            <div class="imgItemsgrid">
+                                <img src="Images/search-icon-02.png" alt="">
+                                <p>Food & Life</p>
+                            </div>
+                            <div class="imgItemsgrid">
+                                <img src="Images/search-icon-03.png" alt="" id="carimg">
+                                <p>Cars</p>
+                            </div>
+                            <div class="imgItemsgrid">
+                                <img src="Images/search-icon-04.png" alt="">
+                                <p>Shopping</p>
+                            </div>
+                            <div class="imgItemsgrid">
+                                <img src="Images/search-icon-05.png" alt="">
+                                <p>Travelling</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="secondColumn">
+                        <h2>One Of The Most Trending Stuffs Right Now!</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, deleniti dolor repellat
+                            hic consequatur veniam modi amet quis quo debitis beatae eveniet similique. Placeat
+                            et laudantium dignissimos soluta deserunt velit!</p>
+                        <button>Discover More</button>
+                    </div>
+                    <div class="thirdColumn">
+                        <img src="Images/tabs-image-01.jpg" alt="" width="200px">
+                    </div>
+
+                </div>
+                <!-- <div class      ="gridColumn">
+                  <div class="firstColumn">
+                    <div class="iconConatinergrid">
+                        <div class="imgItemsgrid">
+                            <img src="Images/search-icon-01.png" alt=""><br>
+                            <p>Home</p>
+                        </div>
+                        <div class="imgItemsgrid">
+                            <img src="Images/search-icon-02.png" alt="">
+                            <p>Food & Life</p>
+                        </div>
+                        <div class="imgItemsgrid">
+                            <img src="Images/search-icon-03.png" alt="" id="carimg">
+                            <p>Cars</p>
+                        </div>
+                        <div class="imgItemsgrid">
+                            <img src="Images/search-icon-04.png" alt="">
+                            <p>Shopping</p>
+                        </div>
+                        <div class="imgItemsgrid">
+                            <img src="Images/search-icon-05.png" alt="">
+                            <p>Travelling</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="secondColumn">
+                    <h2>One Of The Most Trending Stuffs Right Now!</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, deleniti dolor repellat hic consequatur veniam modi amet quis quo debitis beatae eveniet similique. Placeat 
+                        et laudantium dignissimos soluta deserunt velit!</p>
+                        <button>Discover More</button>
+                </div>
+                <div class="thirdColumn">
+                    <img src="Images/tabs-image-01.jpg" alt="" width="200px">
+                </div>
+
+              </div> -->
+
+            </div>
+            <div class="Recent"></div>
+            <div class="Footer">
+
+            </div>
+
+        </div>
+        <div class="main3">
+            <h2>Recent Listing</h2>
+            <p>Check This Items</p>
+            <div class="foodsection">
+                <div class="imagediv">
+                    <img src="Images/listing-04.jpg" alt="" height="200px" width="300px">
+                     <div class="infromation">
+                    <p>The Crimson Manor</p>
+                    <p>$550 </p>
+                </div>
+                </div>
+              
+            </div>
+            <div class="foodsection">
+                <div class="imagediv">
+                    <img src="Images/listing-05.jpg" alt="" height="200px" width="300px">
+                    <div class="infromation">
+                    <p>The Crimson Manor</p>
+                    <p>$550 </p>
+                </div>
+                </div>
+            </div>
+            <div class="foodsection">
+                <div class="imagediv">
+                    <img src="Images/listing-06.jpg" alt="" height="200px" width="300px">
+                    <div class="infromation">
+                    <p>The Crimson Manor</p>
+                    <p>$550 </p>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="main4">
+             <footer>
+        <div class="firstfooter">
+            <img src="Images/black-logo.png" alt="" height="30px">
+            <p> Lorem Ipsum has been the industry's standard dummy text ever<br>
+                 of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <!-- <div><h3>HelpFull Links</h3></div> -->
+        <div class="secondfooter">
+            <!-- <div><h3>HelpFull Links</h3></div> -->
+              <!-- <h3>HelpFull Links</h3> -->
+
+                <div class="parentdivforsecondFooter">
+                                   <!-- <p>HelpFull links</p> -->
+                    <div   class="insideseconddiv1">
+                    <p>HelpFull links</p>
+                    <ul>Categories</ul>
+                    <ul>Reviews</ul>
+                    <ul>Listing</ul>
+                    <ul>Contact Us</ul>
+                </div>
+                <div style="margin-top: 20px;"  class="insideseconddiv2">
+                    <ul>About Us</ul>
+                    <ul>Rewards</ul>
+                    <ul>Useful Sites</ul>
+                    <ul>Privacy Policy</ul>
+                </div>
+                </div>
+        </div>
+        <div class="thirdfooter">
+            <label>Contact US</label>
+            <p style="margin-top: 10px;">Seeta Circle <br>
+                HoskereHalli</p>
+            <p>999-888-777-0</p>
+            <p>444-555-333-0</p>
+        </div>
+      </footer>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
