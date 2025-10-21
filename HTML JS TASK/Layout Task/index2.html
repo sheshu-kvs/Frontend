@@ -16,6 +16,7 @@
         body {
             width: 100%;
             height: 100%;
+            font-family: cursive;
         }
 
         .mainContainer {
@@ -40,6 +41,7 @@
 
         .navpart2 {
             display: flex;
+            cursor: pointer;
             justify-content: center;
             align-items: center;
             gap: 20px;
@@ -54,6 +56,11 @@
         .navpart2 i {
             display: none;
         }
+
+        .navpart2 p:hover {
+            color: darkgray;
+        }
+
 
         /* Main 1  */
         .main1 {
@@ -97,24 +104,41 @@
         .iconConatiner {
             margin-top: 2vw;
             display: flex;
-            padding: 2vw 8vw;
+            align-content: center;
             justify-content: space-evenly;
-            align-items: center;
+
 
         }
 
         .imgItems {
-            width: 60px;
-            height: 60px;
+
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+
+        }
+
+
+
+
+        .imgiconformain,
+        .imgiconformain12 {
+            background-color: aliceblue;
+            height: 6vh;
+            width: 3vw;
+
+            border-radius: 22px;
+        }
+
+        .imgiconformain12 {
+            height: 45px;
+            width: 42px;
+            display: block;
             object-fit: contain;
 
         }
 
-        .iconConatiner img {
-            background-color: white;
-            border-radius: 60px;
-            padding: 1vw 1vw;
-        }
 
         #carimg {
             object-fit: center;
@@ -131,6 +155,14 @@
             align-items: center;
         }
 
+        .main2 h2 {
+            margin-bottom: 1vw;
+        }
+
+        /* .main p{
+             margin-bottom: 1vw;
+        } */
+
 
         .gridColumn {
             background-color: darkgray;
@@ -145,6 +177,9 @@
             display: grid;
             grid-template-rows: repeat(5, auto);
             padding: 2vw 3vw;
+            text-align: center;
+            align-items: center;
+
         }
 
         .iconConatinergrid {}
@@ -159,32 +194,44 @@
 
         .imgItemsgrid img {
             background-color: white;
+            width: 3.5vw;
             border-radius: 60px;
-            padding: 1vw 1vw;
+            padding: 0.3vw;
 
         }
+
+        .imgItemsgrid:hover {
+            background-color: antiquewhite;
+            border-radius: 1vw;
+
+        }
+
+        .CarImgs {
+            height: 45px;
+            width: 42px;
+            display: block;
+            object-fit: contain;
+
+
+        }
+
+
 
         .imgItemsgrid p {}
 
 
-        .secondColumn {
-            /* padding: 5vw; */
-            text-align: left;
-
-
-        }
+        .secondColumn {}
 
         .secondColumn p {
             text-align: left;
-            margin-top: 0.5vw;
+            margin-top: 2vw;
+            font-size: 1.5vw;
             padding: 0vw 2vw;
-            font-size: 2.3vw;
-            line-height: 3vw;
         }
 
         .secondColumn button {
-            margin-top: 1vw;
-            padding: 1.2vw 12vw;
+            margin-top: 4.5vw;
+            padding: 1.2vw 8vw;
         }
 
         .thirdColumn {
@@ -201,49 +248,66 @@
 
 
         /* main3  */
-        .main3{
+        .main3 {
             margin-top: 2vw;
             padding: 4vw 6vw;
             text-align: center;
         }
-        .foodsection{
+
+        .foodsection {
             padding: 0.2vw;
 
         }
-        .imagediv{
+
+        .imagediv {
             display: flex;
             background-color: antiquewhite;
-             gap: 2vw;
+            gap: 2vw;
         }
-        .infromation{
+
+        .infromation {
             padding: 6vw 8vw;
         }
-      /* main4 */
 
-          .main4{
-             padding: 4vw 6vw;
-          }
-          footer{
+        /* main4 */
+
+        .main4 {
+            padding: 4vw 6vw;
+        }
+
+        footer {
             display: flex;
             justify-content: space-between;
-          }
-          footer img{
+        }
+
+        footer img {
             height: 45px;
             margin-bottom: 1vw;
-          }
-          .parentdivforsecondFooter{
-            display: flex;
-          }
-          
+        }
 
+        .parentdivforsecondFooter {
+            display: flex;
+        }
+
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: darkgray;
+        }
+          html{
+        scroll-behavior: smooth;
+       }
 
 
 
         @media (max-width:600px) {
             .nav {
                 height: 60px;
-                background-color: aqua;
-                color: green;
+                
             }
 
             .nav img {
@@ -252,7 +316,7 @@
                 padding: 1vw 1vw;
             }
 
-            .navpart2 p {
+            .navpart2 .headingContent {
                 display: none;
             }
 
@@ -301,10 +365,12 @@
                 width: 100vw;
                 margin-bottom: 28vh;
             }
-            .main2 h2{
+
+            .main2 h2 {
                 font-size: 5vw;
             }
-            .main2 p{
+
+            .main2 p {
                 font-size: 4vw;
                 margin-bottom: 1vw;
             }
@@ -334,35 +400,43 @@
             }
 
             .thirdColumn img {
-                height:55vh;
+                height: 55vh;
                 width: 23vw;
             }
-            .main3{
+
+            .main3 {
                 height: calc(100% - 35vh);
             }
-            .main3 h2{
-              font-size: 5vw;     
+
+            .main3 h2 {
+                font-size: 5vw;
             }
-             .main3 p{
+
+            .main3 p {
                 font-size: 4vw;
             }
-            .main4{
+
+            .main4 {
                 display: flex;
                 justify-content: space-between;
                 margin-top: 50vw;
                 padding: 2vw 6vw;
                 gap: 4vw;
             }
-            .firstfooter p{
+
+            .firstfooter p {
                 font-size: 5vw;
             }
-            .secondfooter p{
+
+            .secondfooter p {
                 font-size: 4vw;
             }
+
             .parentdivforsecondFooter {
                 font-size: 4.5vw;
             }
-            .thirdfooter{
+
+            .thirdfooter {
                 font-size: 4.5vw;
             }
 
@@ -380,15 +454,68 @@
         <div class="nav">
             <img src="Images/white-logo.png" alt="">
             <div class="navpart2">
-                <p>Home</p>
-                <p>Category</p>
-                <p>Listing</p>
-                <p>Contact Us</p>
+                <div class="headingContent"><a href="#Home">Home</a></div>
+                <div class="headingContent"><a href="#Category">Category</a></div>
+                <div class="headingContent"><a href="#Listing">Listing</a></div>
+                <div class="headingContent"><a href="#footer">Contact Us</a></div>
                 <button>Add Your Listing</button>
                 <i class="ri-menu-line"></i>
             </div>
         </div>
-        <div class="main1">
+        <section id="Home">
+            <div class="main1">
+                <p>Over 36500+ Active Listing</p>
+                <h2>Find Nearby Places & Things</h2>
+                <div class="inpContainer">
+                    <div class="inp1">
+                        <select name="All Areas" id="">
+                            <option value="" id="optionInp">Area1</option>
+                            <option value="" id="optionInp">Area2</option>
+                            <option value="" id="optionInp">Area3</option>
+                            <option value="" id="optionInp">Area4</option>
+                        </select>
+                    </div>
+                    <div class="inp2">
+                        <input type="text" placeholder="Enter a location ">
+                    </div>
+                    <div class="inp3">
+                        <select name="Enter The Price" id="">
+                            <option value="">1000</option>
+                            <option value="">1000</option>
+                            <option value="">1000</option>
+                            <option value="">1000</option>
+                        </select>
+                    </div>
+                    <div class="inp4">
+                        <img src="Images/search icon.svg" width="40px" height="20px">
+                    </div>
+                </div>
+                <div class="iconConatiner">
+                    <div class="imgItems">
+                        <img src="Images/search-icon-01.png" alt="" class="imgiconformain">
+                        <p>Home</p>
+                    </div>
+                    <div class="imgItems">
+                        <img src="Images/search-icon-02.png" alt="" class="imgiconformain">
+                        <p>Food & Life</p>
+                    </div>
+                    <div class="imgItems">
+                        <img src="Images/search-icon-03.png" alt="" class="imgiconformain12">
+                        <p>Cars</p>
+                    </div>
+                    <div class="imgItems">
+                        <img src="Images/search-icon-04.png" alt="" class="imgiconformain">
+                        <p>Shopping</p>
+                    </div>
+                    <div class="imgItems">
+                        <img src="Images/search-icon-05.png" alt="" class="imgiconformain">
+                        <p>Travelling</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- <div class="main1">
             <p>Over 36500+ Active Listing</p>
             <h2>Find Nearby Places & Things</h2>
             <div class="inpContainer">
@@ -417,71 +544,73 @@
             </div>
             <div class="iconConatiner">
                 <div class="imgItems">
-                    <img src="Images/search-icon-01.png" alt=""><br>
+                    <img src="Images/search-icon-01.png" alt="" class="imgiconformain">
                     <p>Home</p>
                 </div>
                 <div class="imgItems">
-                    <img src="Images/search-icon-02.png" alt="">
+                    <img src="Images/search-icon-02.png" alt="" class="imgiconformain">
                     <p>Food & Life</p>
                 </div>
                 <div class="imgItems">
-                    <img src="Images/search-icon-03.png" alt="" id="carimg">
+                    <img src="Images/search-icon-03.png" alt="" class="imgiconformain12">
                     <p>Cars</p>
                 </div>
                 <div class="imgItems">
-                    <img src="Images/search-icon-04.png" alt="">
+                    <img src="Images/search-icon-04.png" alt="" class="imgiconformain">
                     <p>Shopping</p>
                 </div>
                 <div class="imgItems">
-                    <img src="Images/search-icon-05.png" alt="">
+                    <img src="Images/search-icon-05.png" alt="" class="imgiconformain">
                     <p>Travelling</p>
                 </div>
             </div>
 
-        </div>
-        <div class="main2">
-            <div class="category">
-                <h2>Popular Categories</h2>
-                <p>Check This Items</p>
-                <div class="gridColumn">
-                    <div class="firstColumn">
-                        <div class="iconConatinergrid">
-                            <div class="imgItemsgrid">
-                                <img src="Images/search-icon-01.png" alt=""><br>
-                                <p>Home</p>
+        </div> -->
+
+        <section id="Category">
+            <div class="main2">
+                <div class="category">
+                    <h2>Popular Categories</h2>
+                    <p>Check This Items</p>
+                    <div class="gridColumn">
+                        <div class="firstColumn">
+                            <div class="iconConatinergrid">
+                                <div class="imgItemsgrid">
+                                    <img src="Images/search-icon-01.png" alt="" class="imgGrid"><br>
+                                    <p>Home</p>
+                                </div>
+                                <div class="imgItemsgrid">
+                                    <img src="Images/search-icon-02.png" alt="" class="imgGrid">
+                                    <p>Food & Life</p>
+                                </div>
+                                <div class="imgItemsgrid">
+                                    <img src="Images/search-icon-03.png" alt="" id="carimg" class="CarImgs">
+                                    <p>Cars</p>
+                                </div>
+                                <div class="imgItemsgrid">
+                                    <img src="Images/search-icon-04.png" alt="" class="imgGrid">
+                                    <p>Shopping</p>
+                                </div>
+                                <div class="imgItemsgrid">
+                                    <img src="Images/search-icon-05.png" alt="" class="imgGrid">
+                                    <p>Travelling</p>
+                                </div>
                             </div>
-                            <div class="imgItemsgrid">
-                                <img src="Images/search-icon-02.png" alt="">
-                                <p>Food & Life</p>
-                            </div>
-                            <div class="imgItemsgrid">
-                                <img src="Images/search-icon-03.png" alt="" id="carimg">
-                                <p>Cars</p>
-                            </div>
-                            <div class="imgItemsgrid">
-                                <img src="Images/search-icon-04.png" alt="">
-                                <p>Shopping</p>
-                            </div>
-                            <div class="imgItemsgrid">
-                                <img src="Images/search-icon-05.png" alt="">
-                                <p>Travelling</p>
-                            </div>
+
+                        </div>
+                        <div class="secondColumn">
+                            <h2>One Of The Most Trending Stuffs Right Now!</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, deleniti dolor repellat
+                                hic consequatur veniam modi amet quis quo debitis beatae eveniet similique. Placeat
+                                et laudantium dignissimos soluta deserunt velit!</p>
+                            <button>Discover More</button>
+                        </div>
+                        <div class="thirdColumn">
+                            <img src="Images/tabs-image-01.jpg" alt="" width="200px">
                         </div>
 
                     </div>
-                    <div class="secondColumn">
-                        <h2>One Of The Most Trending Stuffs Right Now!</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, deleniti dolor repellat
-                            hic consequatur veniam modi amet quis quo debitis beatae eveniet similique. Placeat
-                            et laudantium dignissimos soluta deserunt velit!</p>
-                        <button>Discover More</button>
-                    </div>
-                    <div class="thirdColumn">
-                        <img src="Images/tabs-image-01.jpg" alt="" width="200px">
-                    </div>
-
-                </div>
-                <!-- <div class      ="gridColumn">
+                    <!-- <div class      ="gridColumn">
                   <div class="firstColumn">
                     <div class="iconConatinergrid">
                         <div class="imgItemsgrid">
@@ -519,14 +648,50 @@
 
               </div> -->
 
-            </div>
-            <div class="Recent"></div>
-            <div class="Footer">
+                </div>
+                <div class="Recent"></div>
+                <div class="Footer">
+
+                </div>
 
             </div>
+        </section>
+        <section id="Listing">
+            <div class="main3">
+                <h2>Recent Listing</h2>
+                <p>Check This Items</p>
+                <div class="foodsection">
+                    <div class="imagediv">
+                        <img src="Images/listing-04.jpg" alt="" height="200px" width="300px">
+                        <div class="infromation">
+                            <p>The Crimson Manor</p>
+                            <p>$550 </p>
+                        </div>
+                    </div>
 
-        </div>
-        <div class="main3">
+                </div>
+                <div class="foodsection">
+                    <div class="imagediv">
+                        <img src="Images/listing-05.jpg" alt="" height="200px" width="300px">
+                        <div class="infromation">
+                            <p>The Crimson Manor</p>
+                            <p>$550 </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="foodsection">
+                    <div class="imagediv">
+                        <img src="Images/listing-06.jpg" alt="" height="200px" width="300px">
+                        <div class="infromation">
+                            <p>The Crimson Manor</p>
+                            <p>$550 </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- <div class="main3">
             <h2>Recent Listing</h2>
             <p>Check This Items</p>
             <div class="foodsection">
@@ -558,45 +723,50 @@
                 </div>
                 
             </div>
-        </div>
-        <div class="main4">
-             <footer>
-        <div class="firstfooter">
-            <img src="Images/black-logo.png" alt="" height="30px">
-            <p> Lorem Ipsum has been the industry's standard dummy text ever<br>
-                 of type and scrambled it to make a type specimen book.</p>
-        </div>
-        <!-- <div><h3>HelpFull Links</h3></div> -->
-        <div class="secondfooter">
-            <!-- <div><h3>HelpFull Links</h3></div> -->
-              <!-- <h3>HelpFull Links</h3> -->
+        </div> -->
 
-                <div class="parentdivforsecondFooter">
-                                   <!-- <p>HelpFull links</p> -->
-                    <div   class="insideseconddiv1">
-                    <p>HelpFull links</p>
-                    <ul>Categories</ul>
-                    <ul>Reviews</ul>
-                    <ul>Listing</ul>
-                    <ul>Contact Us</ul>
-                </div>
-                <div style="margin-top: 20px;"  class="insideseconddiv2">
-                    <ul>About Us</ul>
-                    <ul>Rewards</ul>
-                    <ul>Useful Sites</ul>
-                    <ul>Privacy Policy</ul>
-                </div>
-                </div>
-        </div>
-        <div class="thirdfooter">
-            <label>Contact US</label>
-            <p style="margin-top: 10px;">Seeta Circle <br>
-                HoskereHalli</p>
-            <p>999-888-777-0</p>
-            <p>444-555-333-0</p>
-        </div>
-      </footer>
-        </div>
+        <section id="footer">
+            <div class="main4">
+                <footer>
+                    <div class="firstfooter">
+                        <img src="Images/black-logo.png" alt="" height="30px">
+                        <p> Lorem Ipsum has been the industry's standard dummy text ever<br>
+                            of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                    <!-- <div><h3>HelpFull Links</h3></div> -->
+                    <div class="secondfooter">
+                        <!-- <div><h3>HelpFull Links</h3></div> -->
+                        <!-- <h3>HelpFull Links</h3> -->
+
+                        <div class="parentdivforsecondFooter">
+                            <!-- <p>HelpFull links</p> -->
+                            <div class="insideseconddiv1">
+                                <p>HelpFull links</p>
+                                <ul>Categories</ul>
+                                <ul>Reviews</ul>
+                                <ul>Listing</ul>
+                                <ul>Contact Us</ul>
+                            </div>
+                            <div style="margin-top: 20px;" class="insideseconddiv2">
+                                <ul>About Us</ul>
+                                <ul>Rewards</ul>
+                                <ul>Useful Sites</ul>
+                                <ul>Privacy Policy</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="thirdfooter">
+                        <label>Contact US</label>
+                        <p style="margin-top: 10px;">Seeta Circle <br>
+                            HoskereHalli</p>
+                        <p>999-888-777-0</p>
+                        <p>444-555-333-0</p>
+                    </div>
+                </footer>
+            </div>
+
+        </section>
+
 
     </div>
 
