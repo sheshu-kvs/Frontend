@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sticky vs Fixed Example</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .section {
+    height: 600px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px;
+  }
+
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    z-index: 30;
+  }
+
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: tomato;       
+    color: white;
+    padding: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="fixed-header">
+  🔴 Fixed Header (Always Visible)
+</div>
+
+<div class="section">
+  <div class="sticky-header">
+    🔵 Sticky Header (sticks only in this section)
+  </div>
+  <p>Scroll down inside this page. The blue header will stick
+     only while this section is visible. Once you scroll past this
+     black border, it will go away.</p>
+  <div style="height:1000px;"></div>
+</div>
+
+<div class="section">
+  Another section without sticky header.
+</div>
+
+</body>
+</html>
