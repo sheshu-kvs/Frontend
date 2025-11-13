@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- . What is the difference between Synchronous and Asynchronous JavaScript?
+     An synchronous it will execute the javascript programmes sequeentially it excutes the code one afer the other
+      which means only one resource can be execute, other resources to be waited untill complete of the other resources->
+     
+     asynchornous an asyncronous will excute the prgrms parelly without the without the waiting for the other resources..
+     console.log("java");
+     setTimeout(()=>{
+     console.lo("JAVA12")})
+     console.log("Marry");
+-->
+
+    <script>
+        // there are the 3 types of the variables in the javascript
+        // var a = 12;
+        // var a=25;
+        // console.log(a);
+
+        // let b=20;
+        // b=25;
+        // console.log(b)
+        let promise=new Promise((resolve,reject)=>{
+            let success=true;
+            if(success){
+                resolve("Data Fetched");
+            }
+            else{
+                reject("Data Was Not Fethed..");
+            }
+        })
+
+        promise
+        .then((msg)=>{
+            console.log(msg);
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+
+    </script>
+
+</body>
+</html>

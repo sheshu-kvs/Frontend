@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THIRD LARGEST WORD</title>
+</head>
+<body>
+
+    <script>
+        let a=["abcd","mam","bcdfe"];
+        let first="",second="",third="";
+        let one=0,two=0;
+        for(let i=0;i<a.length;i++){
+            let len = a[i].length;
+            if(len>one){
+                third=second;
+                second=first;
+                first=a[i];
+                one=len;
+            }
+            else if(len>two){
+                second=a[i]
+                two=len;
+            }
+        }
+
+
+        console.log(third);
+    </script>
+</body>
+</html>
