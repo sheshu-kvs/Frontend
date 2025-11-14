@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINUTES</title>
+</head>
+<body>
+
+    <script>
+
+        let time="9:00am-10:00am";
+        let[start,end] = time.split("-");
+        let starttime = start.replace('am','')
+        let endtime = end.replace('am','')
+        let d1 = new Date("2000/01/01" +starttime);
+        let d2 = new Date("2000/01/01" +endtime);
+        let diff = (d2-d1) / 60000;
+
+        console.log(diff);
+    </script>
+    
+</body>
+</html>
