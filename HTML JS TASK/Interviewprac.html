@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Prac...</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex flex-col justify-center items-center h-screen">
+        <div class="bg-black text-white text-2xl p-2 w-1/4">I Am Div Satrting from the New Line</div>
+    <div class="bg-black text-white text-2xl mt-2 mb-5 w-1/4">I Am Div Satrting from the New Line 2 div</div>
+      <p class="bg-amber-400 text-2xl w-1/4">Hlo HRU
+        <span class="text-pink-500 w-1/4">Sheshu</span>
+        i am Good
+      </p> 
+      <img src="circleimag.png" height="200px" width="200px" class="" alt="Image Not Found">
+    </div> 
+    
+    <script>
+        let a = [1,2,3,4,5,6];
+
+       
+
+        // let data = a.map((val)=>val*2);
+        // console.log(data)
+    
+        // let data1 = a.map((val)=>{
+        //     return val*2
+        // })
+        
+
+        // filter are used to the 
+        // let data1= a.filter(val=>val%2==0)
+
+        let data1 = a.filter((val)=>{
+            return val%2==0;
+        })
+
+        // console.log(data1)
+
+        a.forEach((val)=>{
+            console.log(val)
+        })
+
+        let data = a.filter((val)=>{
+            // console.log(val%2==0)
+            return val%2==0
+        })
+        console.log(data)   
+
+    </script>
+</body>
+</html>

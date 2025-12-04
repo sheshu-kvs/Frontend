@@ -9,15 +9,9 @@
 
     <script>
 
-        let time="9:00am-10:00am";
-        let[start,end] = time.split("-");
-        let starttime = start.replace('am','')
-        let endtime = end.replace('am','')
-        let d1 = new Date("2000/01/01" +starttime);
-        let d2 = new Date("2000/01/01" +endtime);
-        let diff = (d2-d1) / 60000;
-
-        console.log(diff);
+        let today=new Date().toISOString().slice(0,10);
+        console.log(today);
+        new Date(`{}`)
     </script>
     
 </body>
