@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // function wel(nam){
+        //     console.log("welcome to the Company "+nam);
+        // }
+        // let nam = prompt("Enter the Name");
+        // wel(nam);
+        
+
+        // default Values
+        // function wel2(name="angel"){
+        //     console.log("hi ",name," to the Company");
+        // }
+        // wel2("maryy");
+        // wel2();
+
+        // reutrn the functions
+        // function sum(num1,num2){
+        //     return num1+num2;
+        // }
+        // console.log(sum(10,20));
+
+
+        // captalize Word..
+        function capital(str){
+            console.log(str[0].toUpperCase()+str.slice(1));
+        }
+        // capital("abc")
+
+        // higher order function
+        // we can pass the function has the argument
+        // or   return the another function is called HOF
+
+
+        function SingASong(){
+            console.log("alice ");
+            console.log("Deva");
+        }
+
+        // here what happend means we are passing the function as the argument
+        //  setting the interval every 3sec it will print the data
+        // setInterval(SingASong,3000);
+
+
+        // or we can return the function
+        function muitply(num1){
+           return function(num2){
+            return num1*num2
+           }
+        }
+
+        let data = muitply(10);
+        let res =data(2);
+        // console.log(res)
+
+
+    //    Global Scope
+
+
+        let val =10;
+        function res1(){
+            console.log(val);
+        }
+        // function res2(){
+        //     console.log(val);
+        // }
+        // res1();
+        // res2();
+
+        function res3(){
+            let val=120;
+            console.log(val);    
+        }
+        res3();
+        function res4(){
+            console.log(x);
+            
+        }
+
+        // res4();
+
+        function string_times(str,n){
+            let t="";
+            let count =0;
+            while(count<n){
+                t=t+str+" ";
+                count++;
+            }
+            console.log(t);
+
+        }
+
+
+        string_times("hello",5);
+
+
+
+        // count num
+
+
+        function count(num1,num2,num3){
+            let count =0;
+           if(num1===13){
+              return 0;
+           }
+           if(num2==13){
+            return num1;
+           }
+           if(num3==13){
+            return num1+num2;
+           }
+        }
+         console.log(count(12,13,2));
+    </script>
+</body>
+</html>
