@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">This is the Paragraph txt</p>
+    <h2 class="head">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero tenetur ratione
+         voluptatum pariatur reiciendis ducimus eius iusto debitis? Error explicabo deleniti corporis repellat 
+         at? Tenetur error et sit dolor porro!</h2>
+   <ul id="unorder">
+    <li class="litem">Items</li>
+    <li class="litem">Items</li>
+    <li class="litem">Items</li>
+    <li class="litem">Items</li>
+   </ul>
+   <h2 class="h2" >This is the Modified Txt</h2>
+  <script>
+    let para = document.getElementById('para');
+    para.style.backgroundColor="pink"
+    para.style.color="black"
+    para.style.padding="10px"
+    let head  = document.querySelector('.head');
+    head.style.backgroundColor="green"
+    head.style.color="black"
+    head.style.borderRadius="5px"
+    
+    let list = document.getElementsByClassName('litem');
+    for(let list1 of list){
+        list1.style.color="red"
+    }
+    let h2 = document.getElementById('h2');
+    
+
+    
+
+
+  </script>
+</body>
+</html>
