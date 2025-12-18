@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let books = []
+        let input = prompt("Enter The Operation u Want to Perform[add|list|exit]");
+        while(input!="exit"){
+            if(input == "add"){
+                let newBook = prompt("Enter The Book");
+                books.push(newBook);
+            }
+           else if(input == "list"){
+                console.log(books);
+            }
+            else{
+                console.log("Please Select the Valid Option");
+            }
+            input=prompt("Please select the Valid Option [add|list|exit]")
+        }
+           console.log(books);
+
+        console.log("Tq Fot Using The Application..");
+        
+    </script>
+</body>
+</html>
