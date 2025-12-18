@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Methods</title>
+      <script src="http://code.jquery.com/jquery-3.3.1.js"
+ integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+ crossorigin="anonymous">
+     </script>
+</head>
+<body>
+
+   <h1>This is h1 tag</h1>
+    <h2 class="lang">Java</h2>
+    <h2 class="lang">Spring</h2>
+    <h2 class="lang">Html</h2>
+    <h2 class="lang">Css</h2>
+    <h2 class="lang">Js</h2>
+    <h2 class="lang">Tailwind</h2>
+    <li>Deva</li>
+    <h3>This is Select Tag</h3>
+     <select name="" id="">
+        <option value="Py">Python</option>
+        <option value="djang">Java</option>
+        <option value="c++">C++</option>
+        <option value="c">C</option>
+    </select>
+
+    
+   <h3>This is Image Tage</h3>
+
+    <img src="https://media.istockphoto.com/id/2210688897/photo/ux-ui-design-web-and-application-user-design-concepts-web-design-application-design-user.jpg?s=612x612&w=0&k=20&c=xGqukPJMP8lexSPr9mFW9_mZXgksPNd2p9MGBY5UjHw=" alt="Image Not Found">
+
+    <input type="text" name="name" value=""><br>
+    <!-- <input type="text" name="lname" value=""><br>
+    <input type="number" name="ph" value=""><br>
+    <input type="password" name="pwd" value=""><br> -->
+
+
+
+    <!-- add class Method -->
+     <h2>All The List Items</h2>
+     <li>Items</li>
+     <li>Items</li>
+     <li>Items</li>
+     <li>Items</li>
+     <li>Items</li>
+     <li>Items</li>
+
+
+
+
+
+    
+    <script>
+        // in this we are getting the text and the setting the text using the text method
+        let data = $('h2').text("Java");
+        // console.log(data);
+        $('p').text("This is paragraph text..").css('font-size','40px')
+        // we using the html() for the setting the getting. 
+        $('h1').html('<a href="https://www.amazon.in/?&tag=googhydrabk1-21&ref=pd_sl_5szpgfto9i_e&adgrpid=155259813593&hvpone=&hvptwo=&hvadid=674893540034&hvpos=&hvnetw=g&hvrand=5617104452734692163&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9299659&hvtargid=kwd-64107830&hydadcr=14452_2316413&gad_source=1">AMAZON</a>')
+        $('img').css({width:"80vw",height:"80vh"
+        })
+        $('img').attr('src')
+
+
+        // to get the input tag type we are using the attr
+        $('input').val("dev")
+
+
+        // seeting the select tag
+
+        $('select').val('djang')
+
+
+        // adding the class for the li items
+
+        $('li').addClass('list')
+       $('li:nth-of-type(even)').removeClass('list');
+    </script>
+    
+</body>
+</html>
