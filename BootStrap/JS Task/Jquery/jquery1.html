@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="http://code.jquery.com/jquery-3.3.1.js"
+ integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+ crossorigin="anonymous">
+     </script>
+</head>
+<body>
+    <h2 class="head">Deva</h2>
+    <h2 class="head">Moris</h2>
+    <h2 class="head">Veeni</h2>
+    <h2 class="head">Fathima</h2>
+    <ul>
+        <li class="li">Items</li>
+        <li class="li">Items</li>
+        <li class="li">Items</li>
+        <li class="li">Items</li>
+        <li class="li">Items</li>
+        <li class="li">Items</li>
+    </ul>
+
+
+    <p>Selecting the Particular Element</p>
+
+    <h1 class="lang">Java</h1>
+    <h1 class="lang">Spring</h1>
+    <h1 class="lang">Html</h1>
+    <h1 class="lang">Css</h1>
+    <h1 class="lang">Js</h1>
+    <h1 class="lang">Tailwind</h1>
+
+
+    <p></p>
+
+    <script>
+        let h1tag = document.querySelectorAll('#head');
+        // console.log(h1tag.textContent)
+       
+        // for(let val of h1tag){
+        //     console.log(val)
+        // }
+
+
+        
+        // In the jquery We can use the  $
+
+        //  var val = $('h2').css({color:'blue',
+        //     background:'red',
+        //  });
+        //  console.log(val);
+
+             var val = $('h2');
+             let mycss={
+                color:'red',
+                background:'aqua',
+                border:'10px solid black'
+             }
+             val.css(mycss)
+             var val2 = $('li');
+             let res= val2.css('font-size','50px');
+              console.log(res);
+
+            // selecting the first element
+            //  let fas = $('h1:first')
+
+            //   selecting the last Element
+
+              let las = $('h1:last')
+
+           las.css({color:'yellow' ,background:'black' ,borderRadius:'5px' ,padding:'10px'});
+          
+
+
+            // selects the nth tag accordin to the user
+            let res2 = $('h1:nth-of-type(2)');
+            res2.css({color:'red' ,background:'aqua' ,borderRadius:'5px' ,padding:'10px'});
+            // console.log(data2);
+            
+              
+
+
+
+
+              
+
+
+
+    </script>
+
+        
+         
+      
+  
+</body>
+</html>
